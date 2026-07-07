@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="DevRadar AI dashboard preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#05070d"/><stop offset="0.55" stop-color="#11142a"/><stop offset="1" stop-color="#0a2a22"/></linearGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#00d4ff"/><stop offset="1" stop-color="#00ff88"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse"><path d="M 38 0 L 0 0 0 38" fill="none" stroke="#00d4ff" stroke-opacity="0.08" stroke-width="1"/></pattern>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#grid)"/>
+  <rect x="78" y="72" width="1044" height="576" rx="32" fill="#0b0f1c" stroke="#00d4ff" stroke-opacity="0.45"/>
+  <text x="116" y="134" fill="#00ff88" font-family="monospace" font-size="34" font-weight="700">DEVRADAR AI</text>
+  <text x="116" y="174" fill="#91a3b8" font-family="monospace" font-size="20">skill gap analysis / roadmap engine</text>
+  <rect x="116" y="220" width="310" height="318" rx="22" fill="#111827" stroke="#243044"/>
+  <text x="146" y="270" fill="#fff" font-family="monospace" font-size="24">Compatibilidade</text>
+  <text x="146" y="378" fill="#00ff88" font-family="monospace" font-size="92" font-weight="700" filter="url(#glow)">76%</text>
+  <text x="146" y="440" fill="#91a3b8" font-family="monospace" font-size="20">Full Stack Junior</text>
+  <rect x="474" y="220" width="588" height="318" rx="22" fill="#111827" stroke="#243044"/>
+  <text x="514" y="270" fill="#fff" font-family="monospace" font-size="24">Radar de habilidades</text>
+  <circle cx="760" cy="380" r="122" fill="none" stroke="#00d4ff" stroke-opacity="0.28" stroke-width="2"/>
+  <circle cx="760" cy="380" r="82" fill="none" stroke="#00ff88" stroke-opacity="0.35" stroke-width="2"/>
+  <line x1="638" y1="380" x2="882" y2="380" stroke="#00d4ff" stroke-opacity="0.35"/>
+  <line x1="760" y1="258" x2="760" y2="502" stroke="#00d4ff" stroke-opacity="0.35"/>
+  <path d="M760 286 L839 338 L814 456 L705 468 L642 374 Z" fill="#00ff88" fill-opacity="0.18" stroke="url(#neon)" stroke-width="4" filter="url(#glow)"/>
+  <g font-family="monospace" font-size="18" fill="#00d4ff">
+    <text x="636" y="248">React</text><text x="855" y="338">Node</text><text x="820" y="520">SQL</text><text x="590" y="494">TS</text><text x="590" y="374">Git</text>
+  </g>
+  <rect x="116" y="574" width="946" height="32" rx="16" fill="#101827"/>
+  <rect x="116" y="574" width="720" height="32" rx="16" fill="url(#neon)" filter="url(#glow)"/>
+</svg>
