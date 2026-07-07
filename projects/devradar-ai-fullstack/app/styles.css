@@ -1,0 +1,147 @@
+:root {
+  --bg: #09090f;
+  --card: #131320;
+  --line: #25253a;
+  --text: #f4f7fb;
+  --muted: #9ca3af;
+  --green: #00ff88;
+  --cyan: #00d4ff;
+  --pink: #ff3df2;
+  --red: #ff4d6d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(0, 212, 255, 0.18), transparent 32rem),
+    radial-gradient(circle at top right, rgba(255, 61, 242, 0.14), transparent 28rem),
+    var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-shell {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.hero-card,
+.panel,
+.roadmap {
+  background: rgba(19, 19, 32, 0.82);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.hero-card {
+  padding: 44px;
+  margin-bottom: 24px;
+}
+
+.eyebrow,
+.panel-label {
+  color: var(--green);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 7vw, 5.6rem);
+  line-height: 0.95;
+  margin: 12px 0;
+}
+
+.hero-text {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.12rem;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.panel {
+  padding: 28px;
+}
+
+.panel h2 {
+  margin-top: 10px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.chips span {
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  background: rgba(0, 212, 255, 0.06);
+}
+
+.score-panel strong {
+  display: block;
+  color: var(--green);
+  font-size: 5rem;
+  line-height: 1;
+  margin: 18px 0 8px;
+}
+
+.success .chips span {
+  border-color: var(--green);
+  color: var(--green);
+  background: rgba(0, 255, 136, 0.06);
+}
+
+.danger .chips span {
+  border-color: var(--red);
+  color: var(--red);
+  background: rgba(255, 77, 109, 0.06);
+}
+
+.roadmap {
+  margin-top: 24px;
+  padding: 32px;
+}
+
+.roadmap ol {
+  display: grid;
+  gap: 16px;
+  padding-left: 22px;
+}
+
+.roadmap li {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.roadmap strong {
+  color: var(--text);
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card {
+    padding: 30px;
+  }
+}
