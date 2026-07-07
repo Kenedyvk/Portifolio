@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="ResolveAI Support API preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#070711"/><stop offset="0.55" stop-color="#1a0d2c"/><stop offset="1" stop-color="#091827"/></linearGradient>
+    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ff00ff"/><stop offset="1" stop-color="#00d4ff"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M 42 0 L 0 0 0 42" fill="none" stroke="#ff00ff" stroke-opacity="0.08" stroke-width="1"/></pattern>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#grid)"/>
+  <rect x="86" y="70" width="1028" height="580" rx="30" fill="#0d101c" stroke="#ff00ff" stroke-opacity="0.45"/>
+  <text x="126" y="132" fill="#ff00ff" font-family="monospace" font-size="34" font-weight="700" filter="url(#glow)">RESOLVEAI SUPPORT API</text>
+  <text x="126" y="170" fill="#9ca3af" font-family="monospace" font-size="20">tickets / SLA / backend automation</text>
+  <g transform="translate(126 226)">
+    <rect width="430" height="76" rx="18" fill="#151a2b" stroke="#2d3655"/>
+    <circle cx="40" cy="38" r="14" fill="#ff4d6d" filter="url(#glow)"/>
+    <text x="74" y="34" fill="#fff" font-family="monospace" font-size="22">Chamado técnico</text>
+    <text x="74" y="58" fill="#9ca3af" font-family="monospace" font-size="16">prioridade / categoria</text>
+  </g>
+  <g transform="translate(126 328)">
+    <rect width="430" height="76" rx="18" fill="#151a2b" stroke="#2d3655"/>
+    <circle cx="40" cy="38" r="14" fill="#00d4ff" filter="url(#glow)"/>
+    <text x="74" y="34" fill="#fff" font-family="monospace" font-size="22">Fila em atendimento</text>
+    <text x="74" y="58" fill="#9ca3af" font-family="monospace" font-size="16">status / triagem ativa</text>
+  </g>
+  <g transform="translate(126 430)">
+    <rect width="430" height="76" rx="18" fill="#151a2b" stroke="#2d3655"/>
+    <circle cx="40" cy="38" r="14" fill="#00ff88" filter="url(#glow)"/>
+    <text x="74" y="34" fill="#fff" font-family="monospace" font-size="22">Chamado resolvido</text>
+    <text x="74" y="58" fill="#9ca3af" font-family="monospace" font-size="16">métricas / dashboard</text>
+  </g>
+  <rect x="640" y="226" width="354" height="280" rx="28" fill="#111827" stroke="#2d3655"/>
+  <text x="682" y="278" fill="#fff" font-family="monospace" font-size="24">API STATUS</text>
+  <text x="682" y="360" fill="#00ff88" font-family="monospace" font-size="78" font-weight="700" filter="url(#glow)">OK</text>
+  <text x="682" y="410" fill="#9ca3af" font-family="monospace" font-size="20">/tickets /metrics /health</text>
+  <path d="M650 548 H1010" stroke="url(#pink)" stroke-width="8" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M650 585 H890" stroke="#00ff88" stroke-width="8" stroke-linecap="round" filter="url(#glow)"/>
+</svg>
