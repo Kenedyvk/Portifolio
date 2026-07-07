@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="VK Tech landing preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#080812"/><stop offset="0.5" stop-color="#111827"/><stop offset="1" stop-color="#1f0b2e"/></linearGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#00ff88"/><stop offset="0.5" stop-color="#00d4ff"/><stop offset="1" stop-color="#ff00ff"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00ff88" stroke-opacity="0.07" stroke-width="1"/></pattern>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#grid)"/>
+  <text x="90" y="118" fill="#00ff88" font-family="monospace" font-size="54" font-weight="700" filter="url(#glow)">VK TECH</text>
+  <text x="90" y="164" fill="#9ca3af" font-family="monospace" font-size="22">loja de informática / manutenção / pc gamer</text>
+  <rect x="88" y="232" width="1024" height="360" rx="30" fill="#0d101c" stroke="#00d4ff" stroke-opacity="0.45"/>
+  <rect x="148" y="292" width="420" height="240" rx="26" fill="#111827" stroke="#243044"/>
+  <rect x="190" y="332" width="336" height="144" rx="12" fill="#05070d" stroke="url(#neon)" stroke-width="4" filter="url(#glow)"/>
+  <rect x="310" y="486" width="96" height="18" fill="#243044"/>
+  <rect x="270" y="504" width="176" height="22" rx="8" fill="#111827" stroke="#00d4ff"/>
+  <g transform="translate(640 288)" font-family="monospace">
+    <rect width="390" height="54" rx="14" fill="#111827" stroke="#243044"/>
+    <text x="24" y="36" fill="#00ff88" font-size="22">Manutenção de computadores</text>
+    <rect y="78" width="390" height="54" rx="14" fill="#111827" stroke="#243044"/>
+    <text x="24" y="114" fill="#00d4ff" font-size="22">Montagem de PC Gamer</text>
+    <rect y="156" width="390" height="54" rx="14" fill="#111827" stroke="#243044"/>
+    <text x="24" y="192" fill="#ff00ff" font-size="22">Peças e acessórios</text>
+    <rect y="234" width="390" height="54" rx="14" fill="#111827" stroke="#243044"/>
+    <text x="24" y="270" fill="#ffffff" font-size="22">Suporte técnico</text>
+  </g>
+  <path d="M90 632 H1110" stroke="url(#neon)" stroke-width="6" stroke-linecap="round" filter="url(#glow)"/>
+</svg>
