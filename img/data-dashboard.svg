@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="Data dashboard preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#070b14"/><stop offset="0.6" stop-color="#0b1729"/><stop offset="1" stop-color="#061f2a"/></linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#00d4ff"/><stop offset="1" stop-color="#00ff88"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M 36 0 L 0 0 0 36" fill="none" stroke="#00d4ff" stroke-opacity="0.07" stroke-width="1"/></pattern>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#grid)"/>
+  <text x="90" y="100" fill="#00d4ff" font-family="monospace" font-size="34" font-weight="700" filter="url(#glow)">DATA DASHBOARD UI</text>
+  <text x="90" y="138" fill="#9ca3af" font-family="monospace" font-size="20">metrics / charts / performance</text>
+  <g transform="translate(90 190)">
+    <rect width="300" height="130" rx="22" fill="#111827" stroke="#243044"/>
+    <text x="28" y="48" fill="#9ca3af" font-family="monospace" font-size="18">Usuários</text>
+    <text x="28" y="100" fill="#00ff88" font-family="monospace" font-size="52" font-weight="700">12.8k</text>
+  </g>
+  <g transform="translate(450 190)">
+    <rect width="300" height="130" rx="22" fill="#111827" stroke="#243044"/>
+    <text x="28" y="48" fill="#9ca3af" font-family="monospace" font-size="18">Conversão</text>
+    <text x="28" y="100" fill="#00d4ff" font-family="monospace" font-size="52" font-weight="700">34%</text>
+  </g>
+  <g transform="translate(810 190)">
+    <rect width="300" height="130" rx="22" fill="#111827" stroke="#243044"/>
+    <text x="28" y="48" fill="#9ca3af" font-family="monospace" font-size="18">Receita</text>
+    <text x="28" y="100" fill="#ff00ff" font-family="monospace" font-size="52" font-weight="700">R$9k</text>
+  </g>
+  <rect x="90" y="370" width="640" height="250" rx="24" fill="#111827" stroke="#243044"/>
+  <polyline points="130,570 210,520 290,544 370,460 450,492 530,418 610,446 690,398" fill="none" stroke="url(#cyan)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <rect x="780" y="370" width="330" height="250" rx="24" fill="#111827" stroke="#243044"/>
+  <circle cx="945" cy="495" r="80" fill="none" stroke="#182338" stroke-width="32"/>
+  <path d="M945 415 A80 80 0 1 1 875 534" fill="none" stroke="#00ff88" stroke-width="32" stroke-linecap="round" filter="url(#glow)"/>
+  <text x="912" y="508" fill="#fff" font-family="monospace" font-size="36" font-weight="700">78%</text>
+</svg>
