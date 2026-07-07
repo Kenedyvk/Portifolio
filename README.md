@@ -1,18 +1,51 @@
 # Portfólio Cyberpunk - Vinicius Kenedy
 
-Este repositório contém um site de portfólio pessoal com identidade visual cyberpunk, desenvolvido para apresentar o perfil profissional, serviços, projetos e formas de contato de **Vinicius Kenedy**.
+Site de portfólio pessoal com identidade visual cyberpunk, criado para apresentar perfil profissional, serviços, projetos e formas de contato de **Vinicius Kenedy**.
 
-O projeto utiliza uma interface moderna com efeitos neon, estilo terminal hacker, animações visuais e uma organização voltada para destacar habilidades em desenvolvimento web, programação e criação de experiências digitais interativas.
+Além da landing page principal em HTML, CSS e JavaScript, o repositório agora inclui dois projetos de mercado para fortalecer o portfólio como desenvolvedor back-end e fullstack.
 
-## 📌 Descrição
+## Projetos em destaque
 
-O **Portfólio Cyberpunk** foi criado como uma página profissional para apresentar informações pessoais, competências, serviços oferecidos, projetos recentes e canais de contato.
+### 1. ResolveAI Support API
 
-A proposta visual do site segue uma estética futurista, inspirada em interfaces de terminal, elementos de matriz digital, cores neon, efeitos de glitch e componentes com aparência tecnológica.
+API backend para suporte técnico inteligente.
 
-O projeto é ideal para demonstrar domínio em desenvolvimento front-end com HTML, CSS e JavaScript, além de servir como vitrine profissional para oportunidades na área de tecnologia.
+**Problema que resolve:** muitas assistências técnicas, lojas de informática e pequenas equipes de TI ainda controlam chamados por WhatsApp, planilhas ou mensagens soltas.
 
-## 🚀 Tecnologias utilizadas
+**O que o projeto mostra:**
+
+- Criação de API REST.
+- Validação de dados.
+- Integração com Supabase/PostgreSQL.
+- Controle de status de chamados.
+- Métricas para dashboard.
+- Base para autenticação e painel administrativo.
+
+**Pasta:** `projects/resolveai-support-api`
+
+**Stack:** Node.js, Express, Supabase, Zod.
+
+---
+
+### 2. DevRadar AI Fullstack
+
+Aplicação fullstack para comparar habilidades de candidatos com vagas e gerar plano de evolução.
+
+**Problema que resolve:** muitos estudantes e candidatos de tecnologia não sabem exatamente o que falta estudar para conseguir estágio ou vaga júnior.
+
+**O que o projeto mostra:**
+
+- Interface moderna com Next.js.
+- Regra de negócio para comparação de habilidades.
+- Score de compatibilidade com vaga.
+- Roadmap baseado nas lacunas técnicas.
+- Estrutura pronta para Supabase, autenticação e IA.
+
+**Pasta:** `projects/devradar-ai-fullstack`
+
+**Stack:** Next.js, TypeScript, Supabase, PostgreSQL.
+
+## Tecnologias do portfólio principal
 
 - HTML5
 - CSS3
@@ -20,110 +53,69 @@ O projeto é ideal para demonstrar domínio em desenvolvimento front-end com HTM
 - Google Fonts
 - Boxicons
 
-## 📁 Estrutura do projeto
+## Estrutura do projeto
 
 ```bash
-Meu-site/
+Portifolio/
 ├── img/
 ├── index.html
 ├── style.css
-└── script.js
+├── script.js
+├── README.md
+└── projects/
+    ├── resolveai-support-api/
+    └── devradar-ai-fullstack/
 ```
 
-## 🧩 Seções do site
+## Seções do site
 
-### Home
+- **Home:** apresentação de Vinicius Kenedy.
+- **About:** perfil profissional, stack e experiência.
+- **Services:** serviços oferecidos.
+- **Portfolio:** cards com projetos.
+- **Contact:** formulário estilizado como terminal.
 
-Seção inicial com apresentação de Vinicius Kenedy, título animado, descrição profissional, links sociais e botão para download de currículo.
-
-### About
-
-Área sobre o desenvolvedor, com informações sobre perfil profissional, stacks, experiência e disponibilidade para projetos.
-
-### Services
-
-Seção dedicada aos serviços oferecidos, incluindo desenvolvimento web e criação de jogos/simulações interativas.
-
-### Portfolio
-
-Área para exibição dos projetos mais recentes, com cards visuais, badges de tecnologias e botões para acessar o código-fonte.
-
-### Contact
-
-Seção de contato com formulário estilizado em formato de terminal, simulando o envio de uma mensagem criptografada.
-
-## ⚙️ Funcionalidades
-
-- Layout moderno com tema cyberpunk;
-- Efeito visual de scanlines e grid digital;
-- Animação de texto digitado automaticamente;
-- Efeito glitch no título principal;
-- Menu com destaque automático conforme a rolagem da página;
-- Cards de serviços e projetos;
-- Formulário de contato com simulação de envio;
-- Design responsivo para diferentes tamanhos de tela;
-- Uso de fontes e ícones externos.
-
-## 🎨 Layout e identidade visual
-
-O layout utiliza uma estética escura com destaque para cores neon, como verde, magenta e ciano. A interface foi construída para transmitir uma aparência tecnológica, moderna e futurista.
-
-Entre os elementos visuais estão:
-
-- Fundo escuro;
-- Grade digital;
-- Linhas de varredura;
-- Bordas recortadas;
-- Brilhos neon;
-- Componentes estilo terminal;
-- Animações de glitch;
-- Tipografia inspirada em sistemas e interfaces técnicas.
-
-## ▶️ Como executar o projeto
-
-Para executar o projeto localmente, siga os passos abaixo:
-
-1. Clone este repositório:
+## Como executar o portfólio principal
 
 ```bash
-git clone https://github.com/Kenedyvk/Meu-site.git
+git clone https://github.com/Kenedyvk/Portifolio.git
+cd Portifolio
 ```
 
-2. Acesse a pasta do projeto:
+Depois abra o arquivo `index.html` no navegador ou use a extensão **Live Server** no VS Code.
+
+## Como executar a API backend
 
 ```bash
-cd Meu-site
+cd projects/resolveai-support-api
+npm install
+cp .env.example .env
+npm run dev
 ```
 
-3. Abra o arquivo `index.html` no navegador.
+## Como executar o projeto fullstack
 
-Também é possível utilizar a extensão **Live Server** no Visual Studio Code para visualizar o projeto em tempo real.
-
-## 📷 Prévia do projeto
-
-Adicione aqui uma imagem de prévia do site:
-
-```markdown
-![Prévia do projeto](img/nome-da-imagem.png)
+```bash
+cd projects/devradar-ai-fullstack
+npm install
+cp .env.example .env.local
+npm run dev
 ```
 
-## 📌 Melhorias futuras
+## Melhorias futuras
 
-- Adicionar links reais para redes sociais;
-- Conectar o botão de download ao currículo;
-- Configurar o formulário para envio real de mensagens;
-- Adicionar projetos reais no portfólio;
-- Publicar o site com GitHub Pages;
-- Melhorar textos e descrições profissionais;
-- Adicionar animações extras;
-- Otimizar SEO;
-- Melhorar acessibilidade.
+- Adicionar links reais para GitHub, LinkedIn e currículo.
+- Atualizar os cards do portfólio com os dois novos projetos.
+- Criar deploy da API e do fullstack.
+- Integrar WhatsApp no ResolveAI.
+- Integrar IA real no DevRadar.
+- Melhorar SEO e acessibilidade.
+- Adicionar testes automatizados.
 
-## 👨‍💻 Autor
+## Autor
 
 Desenvolvido por **Vinicius Kenedy**.
 
-## 📄 Licença
+## Licença
 
-Este projeto está sob a licença MIT.  
-Sinta-se livre para usar, estudar e modificar.
+Este projeto está sob a licença MIT.
