@@ -2,7 +2,7 @@
 
 Site de portfólio pessoal com identidade visual cyberpunk, criado para apresentar perfil profissional, serviços, projetos e formas de contato de **Vinicius Kenedy**.
 
-Além da landing page principal em HTML, CSS e JavaScript, o repositório agora inclui dois projetos de mercado para fortalecer o portfólio como desenvolvedor back-end e fullstack.
+Além da landing page principal em HTML, CSS e JavaScript, o repositório agora inclui três projetos de mercado para fortalecer o portfólio como desenvolvedor back-end e fullstack.
 
 ## Projetos em destaque
 
@@ -45,6 +45,28 @@ Aplicação fullstack para comparar habilidades de candidatos com vagas e gerar 
 
 **Stack:** Next.js, TypeScript, Supabase, PostgreSQL.
 
+---
+
+### 3. RoomFlow Corporate
+
+Protótipo de sistema corporativo para reserva de salas de reunião, serviços de apoio e comunicação por WhatsApp.
+
+**Problema que resolve:** empresas frequentemente organizam salas, quantidade de participantes, videoconferência, copa e suporte de informática por mensagens separadas, aumentando o risco de conflito e esquecimento.
+
+**O que o projeto mostra:**
+
+- Formulário completo de reserva de sala.
+- Validação de capacidade e conflito de horários.
+- Opções de videoconferência e equipamentos.
+- Solicitações para copa e informática.
+- Mensagens de WhatsApp preparadas para cada destinatário.
+- Dashboard, histórico e cancelamento de reservas.
+- Persistência local para demonstração sem instalação.
+
+**Pasta:** `projects/roomflow-corporate`
+
+**Stack da demonstração:** HTML5, CSS3, JavaScript, LocalStorage e links `wa.me`.
+
 ## Tecnologias do portfólio principal
 
 - HTML5
@@ -64,7 +86,8 @@ Portifolio/
 ├── README.md
 └── projects/
     ├── resolveai-support-api/
-    └── devradar-ai-fullstack/
+    ├── devradar-ai-fullstack/
+    └── roomflow-corporate/
 ```
 
 ## Seções do site
@@ -102,11 +125,20 @@ cp .env.example .env.local
 npm run dev
 ```
 
+## Como executar o RoomFlow
+
+```bash
+cd projects/roomflow-corporate
+```
+
+Abra o arquivo `index.html` no navegador ou use o Live Server. Os detalhes e as limitações do protótipo estão no README da pasta.
+
 ## Melhorias futuras
 
 - Adicionar links reais para GitHub, LinkedIn e currículo.
-- Atualizar os cards do portfólio com os dois novos projetos.
+- Atualizar os cards do portfólio com os projetos.
 - Criar deploy da API e do fullstack.
+- Migrar o RoomFlow para Next.js, Supabase e WhatsApp Business Cloud API.
 - Integrar WhatsApp no ResolveAI.
 - Integrar IA real no DevRadar.
 - Melhorar SEO e acessibilidade.
