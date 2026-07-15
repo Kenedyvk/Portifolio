@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RoomFlow Corporate - protótipo de gestão de salas, serviços de apoio e notificações por WhatsApp.">
+  <title>RoomFlow Corporate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#top" aria-label="RoomFlow início">
+        <span class="brand-mark">RF</span>
+        <span><strong>RoomFlow</strong><small>Corporate</small></span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="nav-link active" href="#dashboard">Visão geral</a>
+        <a class="nav-link" href="#nova-reserva">Nova reserva</a>
+        <a class="nav-link" href="#reservas">Reservas</a>
+        <a class="nav-link" href="#configuracoes">WhatsApp</a>
+      </nav>
+
+      <div class="sidebar-card">
+        <span class="online-dot"></span>
+        <div>
+          <strong>Protótipo local</strong>
+          <p>As reservas ficam salvas neste navegador.</p>
+        </div>
+      </div>
+    </aside>
+
+    <main id="top" class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">GESTÃO DE REUNIÕES</p>
+          <h1>Olá, Kenedy 👋</h1>
+          <p>Reserve salas e organize os serviços de apoio em um só lugar.</p>
+        </div>
+        <button id="openBookingButton" class="primary-button" type="button">+ Nova reserva</button>
+      </header>
+
+      <section id="dashboard" class="section-block">
+        <div class="stats-grid">
+          <article class="stat-card">
+            <span class="stat-icon">📅</span>
+            <div><small>Reuniões hoje</small><strong id="todayCount">0</strong></div>
+          </article>
+          <article class="stat-card">
+            <span class="stat-icon">🚪</span>
+            <div><small>Salas cadastradas</small><strong id="roomCount">3</strong></div>
+          </article>
+          <article class="stat-card">
+            <span class="stat-icon">☕</span>
+            <div><small>Pedidos para copa</small><strong id="cateringCount">0</strong></div>
+          </article>
+          <article class="stat-card">
+            <span class="stat-icon">💻</span>
+            <div><small>Apoios de TI</small><strong id="itCount">0</strong></div>
+          </article>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">DISPONIBILIDADE</p>
+                <h2>Salas de reunião</h2>
+              </div>
+              <span class="status-pill success">Atualizado agora</span>
+            </div>
+            <div id="roomList" class="room-list"></div>
+          </article>
+
+          <article class="panel highlight-panel">
+            <p class="eyebrow">PRÓXIMA REUNIÃO</p>
+            <div id="nextMeeting" class="empty-state">
+              <span>🗓️</span>
+              <h3>Nenhuma reunião futura</h3>
+              <p>Crie uma reserva para visualizar os detalhes aqui.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="nova-reserva" class="section-block">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">AGENDAMENTO</p>
+            <h2>Nova reserva</h2>
+            <p>Preencha os dados e indique os serviços necessários.</p>
+          </div>
+        </div>
+
+        <form id="bookingForm" class="booking-form" novalidate>
+          <div class="form-card">
+            <div class="form-card-heading">
+              <span>1</span>
+              <div><h3>Dados da reunião</h3><p>Informações principais do agendamento.</p></div>
+            </div>
+
+            <div class="form-grid two-columns">
+              <label class="field full-width">
+                <span>Título da reunião *</span>
+                <input id="title" name="title" type="text" placeholder="Ex.: Apresentação do projeto" required maxlength="80">
+              </label>
+              <label class="field">
+                <span>Responsável *</span>
+                <input id="organizer" name="organizer" type="text" placeholder="Nome do responsável" required maxlength="60">
+              </label>
+              <label class="field">
+                <span>WhatsApp do responsável *</span>
+                <input id="userPhone" name="userPhone" type="tel" inputmode="numeric" placeholder="5561999999999" required>
+                <small>Informe país + DDD + número, somente dígitos.</small>
+              </label>
+              <label class="field">
+                <span>Data *</span>
+                <input id="date" name="date" type="date" required>
+              </label>
+              <label class="field">
+                <span>Sala *</span>
+                <select id="room" name="room" required></select>
+              </label>
+              <label class="field">
+                <span>Horário inicial *</span>
+                <input id="startTime" name="startTime" type="time" min="07:00" max="20:00" required>
+              </label>
+              <label class="field">
+                <span>Horário final *</span>
+                <input id="endTime" name="endTime" type="time" min="07:00" max="21:00" required>
+              </label>
+              <label class="field">
+                <span>Quantidade de participantes *</span>
+                <input id="participants" name="participants" type="number" min="1" max="50" value="1" required>
+              </label>
+              <div class="capacity-feedback" id="capacityFeedback" aria-live="polite"></div>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <div class="form-card-heading">
+              <span>2</span>
+              <div><h3>Videoconferência e informática</h3><p>Informe equipamentos e necessidade de suporte.</p></div>
+            </div>
+
+            <div class="toggle-row">
+              <div><strong>Será uma videoconferência?</strong><p>Mostra opções de plataforma e equipamentos.</p></div>
+              <label class="switch"><input id="videoConference" type="checkbox"><span></span></label>
+            </div>
+
+            <div id="videoOptions" class="conditional-section hidden">
+              <div class="form-grid two-columns">
+                <label class="field">
+                  <span>Plataforma</span>
+                  <select id="videoPlatform">
+                    <option value="Microsoft Teams">Microsoft Teams</option>
+                    <option value="Google Meet">Google Meet</option>
+                    <option value="Zoom">Zoom</option>
+                    <option value="Outra">Outra</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>Link ou identificação da chamada</span>
+                  <input id="meetingLink" type="text" placeholder="Cole o link da reunião, se já existir">
+                </label>
+              </div>
+
+              <fieldset class="checkbox-group">
+                <legend>Equipamentos necessários</legend>
+                <label><input type="checkbox" name="equipment" value="Projetor"> Projetor</label>
+                <label><input type="checkbox" name="equipment" value="Webcam"> Webcam</label>
+                <label><input type="checkbox" name="equipment" value="Microfone"> Microfone</label>
+                <label><input type="checkbox" name="equipment" value="Caixa de som"> Caixa de som</label>
+                <label><input type="checkbox" name="equipment" value="Notebook"> Notebook</label>
+              </fieldset>
+            </div>
+
+            <div class="toggle-row separated">
+              <div><strong>Solicitar apoio da informática?</strong><p>A equipe receberá os detalhes pelo WhatsApp.</p></div>
+              <label class="switch"><input id="itSupport" type="checkbox"><span></span></label>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <div class="form-card-heading">
+              <span>3</span>
+              <div><h3>Serviços da copa</h3><p>Selecione os itens para atender os participantes.</p></div>
+            </div>
+
+            <div class="toggle-row">
+              <div><strong>Solicitar apoio da copa?</strong><p>A equipe receberá quantidade, itens e horário.</p></div>
+              <label class="switch"><input id="cateringSupport" type="checkbox"><span></span></label>
+            </div>
+
+            <div id="cateringOptions" class="conditional-section hidden">
+              <fieldset class="checkbox-group">
+                <legend>Itens solicitados</legend>
+                <label><input type="checkbox" name="catering" value="Café"> Café</label>
+                <label><input type="checkbox" name="catering" value="Água"> Água</label>
+                <label><input type="checkbox" name="catering" value="Chá"> Chá</label>
+                <label><input type="checkbox" name="catering" value="Copos"> Copos</label>
+                <label><input type="checkbox" name="catering" value="Biscoitos"> Biscoitos</label>
+                <label><input type="checkbox" name="catering" value="Lanche"> Lanche</label>
+              </fieldset>
+              <label class="field">
+                <span>Observação para a copa</span>
+                <textarea id="cateringNotes" rows="3" placeholder="Ex.: Preparar 15 minutos antes"></textarea>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <div class="form-card-heading">
+              <span>4</span>
+              <div><h3>Confirmação</h3><p>Revise as observações e autorize as notificações.</p></div>
+            </div>
+            <label class="field">
+              <span>Observações gerais</span>
+              <textarea id="notes" rows="4" placeholder="Informações adicionais sobre a reunião"></textarea>
+            </label>
+            <label class="consent-box">
+              <input id="whatsappConsent" type="checkbox" required>
+              <span>Autorizo o envio de confirmações e atualizações desta reserva pelo WhatsApp.</span>
+            </label>
+            <div id="formMessage" class="form-message" role="alert"></div>
+            <div class="form-actions">
+              <button class="secondary-button" type="reset">Limpar</button>
+              <button class="primary-button" type="submit">Confirmar reserva</button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <section id="reservas" class="section-block">
+        <div class="section-heading inline-heading">
+          <div>
+            <p class="eyebrow">ACOMPANHAMENTO</p>
+            <h2>Reservas cadastradas</h2>
+          </div>
+          <button id="clearBookingsButton" class="text-button" type="button">Limpar demonstração</button>
+        </div>
+        <div id="bookingList" class="booking-list"></div>
+      </section>
+
+      <section id="configuracoes" class="section-block">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">CONFIGURAÇÕES</p>
+            <h2>Destinatários do WhatsApp</h2>
+            <p>Defina os números que receberão os pedidos de apoio.</p>
+          </div>
+        </div>
+        <form id="settingsForm" class="settings-card">
+          <label class="field">
+            <span>WhatsApp da copa</span>
+            <input id="cateringPhone" type="tel" inputmode="numeric" placeholder="5561999999999">
+          </label>
+          <label class="field">
+            <span>WhatsApp da informática</span>
+            <input id="itPhone" type="tel" inputmode="numeric" placeholder="5561988888888">
+          </label>
+          <button class="primary-button" type="submit">Salvar números</button>
+          <p id="settingsMessage" class="settings-message" aria-live="polite"></p>
+        </form>
+        <p class="integration-note"><strong>Importante:</strong> este protótipo abre o WhatsApp com a mensagem preenchida. O envio 100% automático exige WhatsApp Business Cloud API, templates aprovados e um back-end seguro.</p>
+      </section>
+    </main>
+  </div>
+
+  <div id="confirmationModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="confirmationTitle">
+    <div class="modal-card">
+      <button id="closeModalButton" class="modal-close" type="button" aria-label="Fechar">×</button>
+      <div class="success-icon">✓</div>
+      <p class="eyebrow">RESERVA REGISTRADA</p>
+      <h2 id="confirmationTitle">Sala confirmada!</h2>
+      <div id="confirmationDetails" class="confirmation-details"></div>
+      <p class="modal-help">Use os botões abaixo para abrir o WhatsApp com cada mensagem pronta.</p>
+      <div id="whatsappActions" class="whatsapp-actions"></div>
+      <button id="finishModalButton" class="secondary-button full-button" type="button">Concluir</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
