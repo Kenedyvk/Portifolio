@@ -49,23 +49,24 @@ Aplicação fullstack para comparar habilidades de candidatos com vagas e gerar 
 
 ### 3. RoomFlow Corporate
 
-Protótipo de sistema corporativo para reserva de salas de reunião, serviços de apoio e comunicação por WhatsApp.
+Protótipo de sistema corporativo para reserva de salas, calendário mensal, serviços de apoio e comunicação por e-mail.
 
 **Problema que resolve:** empresas frequentemente organizam salas, quantidade de participantes, videoconferência, copa e suporte de informática por mensagens separadas, aumentando o risco de conflito e esquecimento.
 
 **O que o projeto mostra:**
 
+- Calendário mensal com reservas e seleção de datas.
 - Formulário completo de reserva de sala.
 - Validação de capacidade e conflito de horários.
 - Opções de videoconferência e equipamentos.
 - Solicitações para copa e informática.
-- Mensagens de WhatsApp preparadas para cada destinatário.
+- Rascunhos de e-mail para Gmail ou cliente padrão/Zimbra.
 - Dashboard, histórico e cancelamento de reservas.
 - Persistência local para demonstração sem instalação.
 
 **Pasta:** `projects/roomflow-corporate`
 
-**Stack da demonstração:** HTML5, CSS3, JavaScript, LocalStorage e links `wa.me`.
+**Stack da demonstração:** HTML5, CSS3, JavaScript, LocalStorage, Gmail Compose e `mailto:`.
 
 ## Tecnologias do portfólio principal
 
@@ -138,7 +139,7 @@ Abra o arquivo `index.html` no navegador ou use o Live Server. Os detalhes e as 
 - Adicionar links reais para GitHub, LinkedIn e currículo.
 - Atualizar os cards do portfólio com os projetos.
 - Criar deploy da API e do fullstack.
-- Migrar o RoomFlow para Next.js, Supabase e WhatsApp Business Cloud API.
+- Migrar o RoomFlow para Next.js, Supabase e Gmail API ou SMTP do Zimbra.
 - Integrar WhatsApp no ResolveAI.
 - Integrar IA real no DevRadar.
 - Melhorar SEO e acessibilidade.
