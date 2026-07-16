@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="RoomFlow Corporate - protótipo de gestão de salas, serviços de apoio e notificações por WhatsApp.">
+  <meta name="description" content="RoomFlow Corporate - gestão de salas, calendário e notificações por e-mail para Gmail ou Zimbra.">
   <title>RoomFlow Corporate</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="calendar-email.css">
 </head>
 <body>
   <div class="app-shell">
@@ -20,16 +21,17 @@
 
       <nav class="nav" aria-label="Navegação principal">
         <a class="nav-link active" href="#dashboard">Visão geral</a>
+        <a class="nav-link" href="#calendario">Calendário</a>
         <a class="nav-link" href="#nova-reserva">Nova reserva</a>
         <a class="nav-link" href="#reservas">Reservas</a>
-        <a class="nav-link" href="#configuracoes">WhatsApp</a>
+        <a class="nav-link" href="#configuracoes">E-mail</a>
       </nav>
 
       <div class="sidebar-card">
         <span class="online-dot"></span>
         <div>
           <strong>Protótipo local</strong>
-          <p>As reservas ficam salvas neste navegador.</p>
+          <p>Reservas e configurações ficam salvas neste navegador.</p>
         </div>
       </div>
     </aside>
@@ -39,7 +41,7 @@
         <div>
           <p class="eyebrow">GESTÃO DE REUNIÕES</p>
           <h1>Olá, Kenedy 👋</h1>
-          <p>Reserve salas e organize os serviços de apoio em um só lugar.</p>
+          <p>Reserve salas, consulte o calendário e organize os serviços de apoio.</p>
         </div>
         <button id="openBookingButton" class="primary-button" type="button">+ Nova reserva</button>
       </header>
@@ -87,6 +89,35 @@
         </div>
       </section>
 
+      <section id="calendario" class="section-block">
+        <div class="section-heading calendar-heading">
+          <div>
+            <p class="eyebrow">AGENDA MENSAL</p>
+            <h2>Calendário de reservas</h2>
+            <p>Clique em um dia para preencher automaticamente a data de uma nova reserva.</p>
+          </div>
+          <div class="calendar-controls" aria-label="Controles do calendário">
+            <button id="previousMonthButton" class="icon-button" type="button" aria-label="Mês anterior">‹</button>
+            <button id="todayButton" class="secondary-button compact-button" type="button">Hoje</button>
+            <button id="nextMonthButton" class="icon-button" type="button" aria-label="Próximo mês">›</button>
+          </div>
+        </div>
+
+        <article class="calendar-panel">
+          <div class="calendar-title-row">
+            <h3 id="calendarTitle"></h3>
+            <div class="calendar-legend">
+              <span><i class="legend-dot confirmed"></i> Confirmada</span>
+              <span><i class="legend-dot support"></i> Com apoio</span>
+            </div>
+          </div>
+          <div class="calendar-weekdays" aria-hidden="true">
+            <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
+          </div>
+          <div id="calendarGrid" class="calendar-grid" role="grid" aria-label="Calendário mensal"></div>
+        </article>
+      </section>
+
       <section id="nova-reserva" class="section-block">
         <div class="section-heading">
           <div>
@@ -113,9 +144,9 @@
                 <input id="organizer" name="organizer" type="text" placeholder="Nome do responsável" required maxlength="60">
               </label>
               <label class="field">
-                <span>WhatsApp do responsável *</span>
-                <input id="userPhone" name="userPhone" type="tel" inputmode="numeric" placeholder="5561999999999" required>
-                <small>Informe país + DDD + número, somente dígitos.</small>
+                <span>E-mail do responsável *</span>
+                <input id="userEmail" name="userEmail" type="email" placeholder="nome@empresa.com" required maxlength="120">
+                <small>O responsável receberá a confirmação da reserva.</small>
               </label>
               <label class="field">
                 <span>Data *</span>
@@ -180,7 +211,7 @@
             </div>
 
             <div class="toggle-row separated">
-              <div><strong>Solicitar apoio da informática?</strong><p>A equipe receberá os detalhes pelo WhatsApp.</p></div>
+              <div><strong>Solicitar apoio da informática?</strong><p>A equipe receberá um e-mail com os detalhes técnicos.</p></div>
               <label class="switch"><input id="itSupport" type="checkbox"><span></span></label>
             </div>
           </div>
@@ -192,7 +223,7 @@
             </div>
 
             <div class="toggle-row">
-              <div><strong>Solicitar apoio da copa?</strong><p>A equipe receberá quantidade, itens e horário.</p></div>
+              <div><strong>Solicitar apoio da copa?</strong><p>A equipe receberá quantidade, itens e horário por e-mail.</p></div>
               <label class="switch"><input id="cateringSupport" type="checkbox"><span></span></label>
             </div>
 
@@ -223,8 +254,8 @@
               <textarea id="notes" rows="4" placeholder="Informações adicionais sobre a reunião"></textarea>
             </label>
             <label class="consent-box">
-              <input id="whatsappConsent" type="checkbox" required>
-              <span>Autorizo o envio de confirmações e atualizações desta reserva pelo WhatsApp.</span>
+              <input id="emailConsent" type="checkbox" required>
+              <span>Autorizo o envio de confirmações e atualizações desta reserva por e-mail.</span>
             </label>
             <div id="formMessage" class="form-message" role="alert"></div>
             <div class="form-actions">
@@ -250,23 +281,31 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow">CONFIGURAÇÕES</p>
-            <h2>Destinatários do WhatsApp</h2>
-            <p>Defina os números que receberão os pedidos de apoio.</p>
+            <h2>Destinatários de e-mail</h2>
+            <p>Defina os endereços que receberão as solicitações de apoio.</p>
           </div>
         </div>
         <form id="settingsForm" class="settings-card">
           <label class="field">
-            <span>WhatsApp da copa</span>
-            <input id="cateringPhone" type="tel" inputmode="numeric" placeholder="5561999999999">
+            <span>E-mail da copa</span>
+            <input id="cateringEmail" type="email" placeholder="copa@empresa.com">
           </label>
           <label class="field">
-            <span>WhatsApp da informática</span>
-            <input id="itPhone" type="tel" inputmode="numeric" placeholder="5561988888888">
+            <span>E-mail da informática</span>
+            <input id="itEmail" type="email" placeholder="informatica@empresa.com">
           </label>
-          <button class="primary-button" type="submit">Salvar números</button>
+          <label class="field">
+            <span>Modo preferido</span>
+            <select id="emailProvider">
+              <option value="gmail">Gmail</option>
+              <option value="default">Cliente padrão / Zimbra</option>
+            </select>
+            <small>No modo Zimbra, o navegador usa o aplicativo de e-mail padrão configurado no computador.</small>
+          </label>
+          <button class="primary-button" type="submit">Salvar configurações</button>
           <p id="settingsMessage" class="settings-message" aria-live="polite"></p>
         </form>
-        <p class="integration-note"><strong>Importante:</strong> este protótipo abre o WhatsApp com a mensagem preenchida. O envio 100% automático exige WhatsApp Business Cloud API, templates aprovados e um back-end seguro.</p>
+        <p class="integration-note"><strong>Importante:</strong> esta versão abre um rascunho pronto no Gmail ou no cliente padrão, como o Zimbra. Para enviar automaticamente sem intervenção do usuário, será necessário um back-end com Gmail API ou SMTP do Zimbra.</p>
       </section>
     </main>
   </div>
@@ -278,12 +317,12 @@
       <p class="eyebrow">RESERVA REGISTRADA</p>
       <h2 id="confirmationTitle">Sala confirmada!</h2>
       <div id="confirmationDetails" class="confirmation-details"></div>
-      <p class="modal-help">Use os botões abaixo para abrir o WhatsApp com cada mensagem pronta.</p>
-      <div id="whatsappActions" class="whatsapp-actions"></div>
+      <p class="modal-help">Use os botões abaixo para abrir cada mensagem de e-mail pronta.</p>
+      <div id="emailActions" class="email-actions"></div>
       <button id="finishModalButton" class="secondary-button full-button" type="button">Concluir</button>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="app-email-calendar.js"></script>
 </body>
 </html>
