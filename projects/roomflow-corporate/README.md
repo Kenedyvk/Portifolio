@@ -61,6 +61,13 @@ Para envio automático em produção será necessário implementar:
 - variáveis de ambiente para proteger credenciais;
 - tratamento de falhas e tentativas de reenvio.
 
+## Arquivos principais
+
+- `index.html`: interface, formulário, calendário e configurações.
+- `style.css`: estilos gerais do protótipo.
+- `calendar-email.css`: estilos do calendário e dos botões de e-mail.
+- `app-email-calendar.js`: reservas, validações, calendário e preparação dos e-mails.
+
 ## Próxima versão sugerida
 
 Migrar a interface para Next.js e TypeScript, criar tabelas para salas, reservas, solicitações de apoio e notificações, e integrar o Gmail ou o servidor SMTP do Zimbra em rotas executadas somente no servidor.
