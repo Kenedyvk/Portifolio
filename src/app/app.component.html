@@ -1,0 +1,98 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="over" [(opened)]="opened" role="navigation" aria-label="Menu principal">
+    <span class="logo">
+      <fa-icon [icon]="faCode"></fa-icon>
+      <a routerLink="/" aria-label="Ir para a página inicial" (click)="closeSideNav()">ALISSONLIMA<span
+          class="logo-dev">DEV</span></a>
+      <button id="close" type="button" aria-label="Fechar menu" (click)="sidenav.toggle()">
+        <fa-icon [icon]="faXmark"></fa-icon>
+      </button>
+    </span>
+    <span class="nav-links">
+      @if (isBlogRoute) {
+      <ul>
+        <li (click)="closeSideNav()">
+          <a class="link" routerLink="/blog" routerLinkActive="link--active"
+            [routerLinkActiveOptions]="{ exact: true }">Posts</a>
+        </li>
+        <li (click)="closeSideNav()">
+          <a class="link" routerLink="/blog/categorias" routerLinkActive="link--active">Categorias</a>
+        </li>
+        <li (click)="closeSideNav()">
+          <a class="link" routerLink="/" fragment="sobre">Sobre</a>
+        </li>
+        <li (click)="closeSideNav()">
+          <a class="link" routerLink="/" fragment="contato">Contato</a>
+        </li>
+        <li (click)="closeSideNav()">
+          @if (isBlogPostRoute) {
+          <a class="link link--back" routerLink="/blog">← Blog</a>
+          } @else {
+          <a class="link link--back" routerLink="/">← Portfólio</a>
+          }
+        </li>
+        <li class="theme-toggle">
+          <button type="button" class="theme-toggle-btn" [class.active]="currentTheme() === 'light'"
+            (click)="toggleTheme()"
+            [attr.aria-label]="currentTheme() === 'dark' ? 'Ativar modo claro' : 'Ativar modo escuro'">
+            <span class="theme-icon">
+              @if (currentTheme() === 'dark') {
+              <app-icon name="sun" [size]="28" />
+              } @else {
+              <app-icon name="moon" [size]="28" />
+              }
+            </span>
+          </button>
+          <a class="link link--rss" href="/rss.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS feed"
+            title="RSS feed" (click)="closeSideNav()">
+            <app-icon name="rss" [size]="30" />
+          </a>
+        </li>
+      </ul>
+      } @else {
+      <ul>
+        <li (click)="closeSideNav()">
+          <a class="link" routerLink="/" fragment="perfil">Perfil</a>
+        </li>
+        <li (click)="closeSideNav()">
+          <a class="link" routerLink="/" fragment="sobre">Sobre mim</a>
+        </li>
+        <li (click)="closeSideNav()">
+          <a class="link" routerLink="/" fragment="habilidades">Habilidades</a>
+        </li>
+        <li (click)="closeSideNav()">
+          <a class="link" routerLink="/" fragment="trabalhos">Trabalhos</a>
+        </li>
+        <li (click)="closeSideNav()">
+          <a class="link" routerLink="/" fragment="projetos">Projetos</a>
+        </li>
+        <li (click)="closeSideNav()">
+          <a class="link" routerLink="/blog">Blog</a>
+        </li>
+        <li (click)="closeSideNav()">
+          <a class="link" routerLink="/" fragment="contato">Contato</a>
+        </li>
+      </ul>
+      }
+    </span>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <header>
+      <app-header class="header" [isBlogRoute]="isBlogRoute" [isBlogPostRoute]="isBlogPostRoute"
+        (openSidenav)="sidenav.toggle()"></app-header>
+    </header>
+    <main #primaryContent tabindex="-1">
+      <router-outlet></router-outlet>
+    </main>
+    <footer>
+      <app-footer></app-footer>
+    </footer>
+    @if (showScrollTopButton()) {
+    <button class="scroll-top-button" type="button" aria-label="Voltar ao topo" (click)="scrollToTop()">
+      <fa-icon [icon]="faArrowUp"></fa-icon>
+    </button>
+    }
+    <app-json-ld></app-json-ld>
+  </mat-sidenav-content>
+</mat-sidenav-container>

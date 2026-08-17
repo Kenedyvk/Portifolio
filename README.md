@@ -1,121 +1,59 @@
-# Portfólio Cyberpunk - Vinicius Kenedy
+# alissonlimabr
 
-Site de portfólio pessoal com identidade visual cyberpunk, criado para apresentar perfil profissional, serviços, projetos e formas de contato de **Vinicius Kenedy**.
+## Stack
 
-Além da landing page principal em HTML, CSS e JavaScript, o repositório agora inclui dois projetos de mercado para fortalecer o portfólio como desenvolvedor back-end e fullstack.
+- Angular `21.2.x`
+- Angular Material
+- SSR + prerender
+- Blog integrado ao Sanity CMS
 
-## Projetos em destaque
-
-### 1. ResolveAI Support API
-
-API backend para suporte técnico inteligente.
-
-**Problema que resolve:** muitas assistências técnicas, lojas de informática e pequenas equipes de TI ainda controlam chamados por WhatsApp, planilhas ou mensagens soltas.
-
-**O que o projeto mostra:**
-
-- Criação de API REST.
-- Validação de dados.
-- Integração com Supabase/PostgreSQL.
-- Controle de status de chamados.
-- Métricas para dashboard.
-- Base para autenticação e painel administrativo.
-
-**Pasta:** `projects/resolveai-support-api`
-
-**Stack:** Node.js, Express, Supabase, Zod.
-
----
-
-### 2. DevRadar AI Fullstack
-
-Aplicação fullstack para comparar habilidades de candidatos com vagas e gerar plano de evolução.
-
-**Problema que resolve:** muitos estudantes e candidatos de tecnologia não sabem exatamente o que falta estudar para conseguir estágio ou vaga júnior.
-
-**O que o projeto mostra:**
-
-- Interface moderna com Next.js.
-- Regra de negócio para comparação de habilidades.
-- Score de compatibilidade com vaga.
-- Roadmap baseado nas lacunas técnicas.
-- Estrutura pronta para Supabase, autenticação e IA.
-
-**Pasta:** `projects/devradar-ai-fullstack`
-
-**Stack:** Next.js, TypeScript, Supabase, PostgreSQL.
-
-## Tecnologias do portfólio principal
-
-- HTML5
-- CSS3
-- JavaScript
-- Google Fonts
-- Boxicons
-
-## Estrutura do projeto
+## Rodar localmente
 
 ```bash
-Portifolio/
-├── img/
-├── index.html
-├── style.css
-├── script.js
-├── README.md
-└── projects/
-    ├── resolveai-support-api/
-    └── devradar-ai-fullstack/
+cd alissonlimabr
+npm ci
+npx ng serve
 ```
 
-## Seções do site
+App em `http://localhost:4200`.
 
-- **Home:** apresentação de Vinicius Kenedy.
-- **About:** perfil profissional, stack e experiência.
-- **Services:** serviços oferecidos.
-- **Portfolio:** cards com projetos.
-- **Contact:** formulário estilizado como terminal.
+## Angular CLI
 
-## Como executar o portfólio principal
+- `ng serve`: servidor de desenvolvimento
+- `ng build`: build de produção
+- `ng build --watch --configuration development`: build em watch (development)
+- `ng test`: testes unitários (Karma)
+- `ng run alissonlimabr:server:production`: build SSR server (produção)
+
+Se não tiver Angular CLI global, use `npx`:
+
+- `npx ng serve`
+- `npx ng build`
+- `npx ng test`
+
+## Scripts utilitários do projeto
+
+- `npm run start`: atalho para `ng serve`
+- `npm run build`: atalho para `ng build`
+- `npm run watch`: atalho para `ng build --watch --configuration development`
+- `npm run test`: atalho para `ng test`
+- `npm run prerender`: gera rotas dinâmicas e prerenderiza HTML estático
+
+## Ambiente (Sanity)
+
+Copie `src/environments/environment.example.ts` para:
+
+- `src/environments/environment.ts`
+- `src/environments/environment.prod.ts`
+
+Ou gere automaticamente:
 
 ```bash
-git clone https://github.com/Kenedyvk/Portifolio.git
-cd Portifolio
+node scripts/generate-env.mjs
 ```
 
-Depois abra o arquivo `index.html` no navegador ou use a extensão **Live Server** no VS Code.
+Variáveis esperadas:
 
-## Como executar a API backend
-
-```bash
-cd projects/resolveai-support-api
-npm install
-cp .env.example .env
-npm run dev
-```
-
-## Como executar o projeto fullstack
-
-```bash
-cd projects/devradar-ai-fullstack
-npm install
-cp .env.example .env.local
-npm run dev
-```
-
-## Melhorias futuras
-
-- Adicionar links reais para GitHub, LinkedIn e currículo.
-- Atualizar os cards do portfólio com os dois novos projetos.
-- Criar deploy da API e do fullstack.
-- Integrar WhatsApp no ResolveAI.
-- Integrar IA real no DevRadar.
-- Melhorar SEO e acessibilidade.
-- Adicionar testes automatizados.
-
-## Autor
-
-Desenvolvido por **Vinicius Kenedy**.
-
-## Licença
-
-Este projeto está sob a licença MIT.
+- `SANITY_PROJECT_ID` (obrigatória)
+- `SANITY_DATASET` (default: `production`)
+- `SANITY_API_VERSION` (default: `2025-05-20`)

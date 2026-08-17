@@ -1,0 +1,93 @@
+@use "src/assets/scss/palette" as tokens;
+@use "src/assets/scss/variables-mixins" as *;
+
+.footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 0 16px;
+
+  @include responsive(mobilePlus) {
+    padding: 0;
+  }
+}
+
+.footer-copyright {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 28px;
+  width: 100%;
+  max-width: tokens.$container-wide-max-width;
+
+  @include responsive(mobilePlus) {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  p {
+    display: flex;
+    flex-wrap: wrap;
+    color: tokens.$gray-100;
+    font-size: 14px;
+    line-height: 1.45;
+    gap: 8px;
+
+    a {
+      color: tokens.$purple-300;
+      text-decoration: underline;
+      text-decoration-color: rgba(tokens.$purple-300, 0.35);
+      text-underline-offset: 3px;
+      font-weight: 700;
+      transition:
+        color 0.2s ease,
+        text-decoration-color 0.2s ease;
+
+      &:hover {
+        color: tokens.$purple-200;
+        text-decoration-color: currentColor;
+      }
+    }
+
+    @include responsive(mobile) {
+      font-size: 12px;
+      gap: 5px;
+      justify-content: center;
+    }
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    color: tokens.$gray-100;
+    gap: 8px;
+    opacity: 0.9;
+
+    .logo-dev {
+      color: tokens.$purple-300;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      gap: 0;
+      letter-spacing: 0.035em;
+
+      @include responsive(mobile) {
+        font-size: 12px;
+      }
+    }
+
+    fa-icon {
+      color: tokens.$purple-300;
+      font-size: 19px;
+
+      @include responsive(mobile) {
+        font-size: 20px;
+      }
+    }
+  }
+}

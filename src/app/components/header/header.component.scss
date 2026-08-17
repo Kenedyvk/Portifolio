@@ -1,0 +1,122 @@
+@use "src/assets/scss/palette" as tokens;
+@use "src/assets/scss/variables-mixins" as *;
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: tokens.$container-wide-max-width;
+
+  a {
+    color: tokens.$white;
+  }
+
+  @include responsive(tabletplus) {
+    display: flex;
+    justify-content: space-between;
+
+    .nav-links {
+      display: none !important;
+    }
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  border-color: tokens.$purple-500;
+  padding: 0.6rem;
+  width: 100%;
+
+  @include responsive(tabletplus) {
+    padding: 4px 0;
+  }
+}
+
+.menu {
+  display: none !important;
+  background: transparent;
+  border: 0;
+  font-size: 24px;
+  padding-left: 10px;
+
+  &:hover {
+    transform: translateX(3px);
+    transition: 0.3s;
+  }
+
+  @include responsive(tabletplus) {
+    display: block !important;
+  }
+}
+
+.logo-dev {
+  color: tokens.$purple-300;
+}
+
+.logo-context {
+  font-size: 18px;
+  font-weight: 400;
+  color: tokens.$purple-300;
+  letter-spacing: 0.5px;
+  margin-left: 4px;
+
+  @include responsive(mobile) {
+    font-size: 14px;
+  }
+}
+
+mat-toolbar .nav-links:has(li.theme-toggle) {
+  ul,
+  li {
+    align-items: center;
+  }
+}
+
+// Reserva o espaço do maior rótulo de retorno ("← Portfólio") para evitar
+// que os demais links se desloquem ao alternar entre a listagem e um post.
+mat-toolbar .nav-links .link--back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  inline-size: 7rem;
+}
+
+@include responsive(tabletplus) {
+  mat-toolbar .nav-links:has(li.theme-toggle) {
+    display: flex !important;
+    margin-left: auto;
+
+    ul {
+      align-items: center;
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 0.65rem;
+      margin: 0;
+    }
+
+    li {
+      display: none;
+      min-width: auto;
+      padding: 0;
+    }
+
+    li.theme-toggle,
+    li.theme-toggle + li {
+      display: flex;
+    }
+
+    .theme-toggle-btn,
+    .link--rss {
+      width: auto;
+      height: auto;
+      padding: 5px 8px;
+    }
+  }
+}
+
+@include responsive(mobile) {
+  mat-toolbar .nav-links:has(li.theme-toggle) {
+    display: none !important;
+  }
+}
