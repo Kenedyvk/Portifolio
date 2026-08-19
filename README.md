@@ -1,5 +1,3 @@
-# alissonlimabr
-
 ## Stack
 
 - Angular `21.2.x`
