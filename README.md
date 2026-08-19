@@ -1,57 +1,54 @@
-## Stack
+# Portfólio — Vinicius Kenedy
 
-- Angular `21.2.x`
+Este é o meu portfólio profissional. A ideia foi reunir em um só lugar um pouco da minha trajetória, as tecnologias que venho estudando e os projetos que desenvolvi enquanto avanço na área de tecnologia.
+
+🔗 **Acesse a versão publicada:** [kenedyvk.github.io/Portifolio](https://kenedyvk.github.io/Portifolio/)
+
+## O que você encontra no site
+
+- apresentação e objetivo profissional;
+- habilidades técnicas;
+- experiências profissionais;
+- projetos com acesso aos repositórios;
+- blog integrado ao Sanity;
+- formas de contato.
+
+O site foi pensado para funcionar bem no computador e no celular. Também inclui animações leves, navegação por seções e uma versão estática preparada para o GitHub Pages.
+
+## Tecnologias
+
+- Angular 21
+- TypeScript e SCSS
 - Angular Material
-- SSR + prerender
-- Blog integrado ao Sanity CMS
+- Sanity CMS
+- GitHub Actions e GitHub Pages
 
-## Rodar localmente
+## Como executar localmente
 
 ```bash
-cd alissonlimabr
 npm ci
-npx ng serve
+npm start
 ```
 
-App em `http://localhost:4200`.
+Depois, abra `http://localhost:4200`.
 
-## Angular CLI
+Para gerar a versão de produção usada no GitHub Pages:
 
-- `ng serve`: servidor de desenvolvimento
-- `ng build`: build de produção
-- `ng build --watch --configuration development`: build em watch (development)
-- `ng test`: testes unitários (Karma)
-- `ng run alissonlimabr:server:production`: build SSR server (produção)
+```bash
+npm run build -- --base-href /Portifolio/
+```
 
-Se não tiver Angular CLI global, use `npx`:
+## Configuração do Sanity
 
-- `npx ng serve`
-- `npx ng build`
-- `npx ng test`
-
-## Scripts utilitários do projeto
-
-- `npm run start`: atalho para `ng serve`
-- `npm run build`: atalho para `ng build`
-- `npm run watch`: atalho para `ng build --watch --configuration development`
-- `npm run test`: atalho para `ng test`
-- `npm run prerender`: gera rotas dinâmicas e prerenderiza HTML estático
-
-## Ambiente (Sanity)
-
-Copie `src/environments/environment.example.ts` para:
+Os arquivos reais de ambiente não são versionados. Use `src/environments/environment.example.ts` como referência e crie:
 
 - `src/environments/environment.ts`
 - `src/environments/environment.prod.ts`
 
-Ou gere automaticamente:
+O workflow de publicação gera ambientes seguros com valores de fallback para que o portfólio continue compilando mesmo sem uma conexão ativa com o CMS.
 
-```bash
-node scripts/generate-env.mjs
-```
+## Por que fiz este projeto
 
-Variáveis esperadas:
+Eu queria uma apresentação que fosse além de um currículo em PDF. O portfólio me permite mostrar o que estou aprendendo, registrar minha evolução e tornar meus projetos mais fáceis de conhecer.
 
-- `SANITY_PROJECT_ID` (obrigatória)
-- `SANITY_DATASET` (default: `production`)
-- `SANITY_API_VERSION` (default: `2025-05-20`)
+Se quiser trocar uma ideia sobre o projeto, pode me chamar pelo [LinkedIn](https://www.linkedin.com/in/viniciuskennedy-17808a206).

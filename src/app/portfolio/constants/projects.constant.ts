@@ -13,26 +13,57 @@ interface Project {
 
 export const PROJECTS: Project[] = [
   {
-    title: 'AgSUS - Sistema de Estudos',
-    subtitle: 'HTML · CSS · JavaScript · IA',
+    title: 'Styylus Barbearia',
+    subtitle: 'React · TypeScript · Supabase',
     description:
-      'Sistema de estudos desenvolvido para o processo seletivo AgSUS, com painel do edital, organização de conteúdos, dados estruturados em JSON e chat de suporte com funcionamento offline e integração opcional com IA.',
-    url: 'https://github.com/Kenedyvk/AGSUS',
+      'Experiência de agendamento criada para uma barbearia de verdade: serviços, escolha de horário e uma comunicação mais direta, com dados organizados no Supabase e atenção às regras de acesso.',
+    url: 'https://github.com/Kenedyvk/Styylus',
     skills: [
       {
-        icon: 'html5',
-        alt: 'HTML5',
-        name: 'HTML5',
+        icon: 'reactjs',
+        alt: 'React',
+        name: 'React',
       },
       {
-        icon: 'css3',
-        alt: 'CSS3',
-        name: 'CSS3',
+        icon: 'typescript',
+        alt: 'TypeScript',
+        name: 'TypeScript',
+      },
+      {
+        icon: 'postgres',
+        alt: 'PostgreSQL',
+        name: 'Supabase',
+      },
+      {
+        icon: 'github',
+        alt: 'GitHub',
+        name: 'GitHub',
+      },
+    ],
+    size: 'featured',
+  },
+
+  {
+    title: 'NexusChat',
+    subtitle: 'Node.js · Fastify · Socket.IO',
+    description:
+      'Base funcional para comunicação interna de equipes, com conversas em tempo real, busca, agenda de reuniões, diretório de pessoas e validações para evitar conflitos de horário.',
+    url: 'https://github.com/Kenedyvk/NexusChat',
+    skills: [
+      {
+        icon: 'nodejs',
+        alt: 'Node.js',
+        name: 'Node.js',
       },
       {
         icon: 'javascript',
         alt: 'JavaScript',
         name: 'JavaScript',
+      },
+      {
+        icon: 'docker',
+        alt: 'Docker',
+        name: 'Docker',
       },
       {
         icon: 'github',
@@ -101,10 +132,10 @@ export const PROJECTS: Project[] = [
   },
 
   {
-    title: 'Next.js - Estudos',
-    subtitle: 'Next.js · React · JavaScript',
+    title: 'SEFA — Central de oportunidades',
+    subtitle: 'Next.js · React · TypeScript',
     description:
-      'Projeto utilizado para estudos e experimentação com Next.js e React, explorando a estrutura de aplicações web modernas e desenvolvimento front-end.',
+      'Projeto voltado a suporte técnico e empregabilidade, reunindo chamados, oportunidades e desenvolvimento de habilidades em uma interface simples para quem está entrando na área de tecnologia.',
     url: 'https://github.com/Kenedyvk/nextjs-boilerplate',
     skills: [
       {
@@ -113,9 +144,9 @@ export const PROJECTS: Project[] = [
         name: 'React',
       },
       {
-        icon: 'javascript',
-        alt: 'JavaScript',
-        name: 'JavaScript',
+        icon: 'typescript',
+        alt: 'TypeScript',
+        name: 'TypeScript',
       },
       {
         icon: 'github',

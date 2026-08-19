@@ -1,5 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component, ViewEncapsulation, computed, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { RouterLink } from '@angular/router';
@@ -75,8 +75,6 @@ const MONTH_INDEX: Record<string, number> = {
   standalone: true,
   imports: [
     CommonModule,
-    NgOptimizedImage,
-
     // FontAwesome
     FontAwesomeModule,
 
