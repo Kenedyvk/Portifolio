@@ -64,7 +64,7 @@ export class IconComponent {
         this.svg.set(this.sanitizer.bypassSecurityTrustHtml(cache.get(cacheKey)!));
         return;
       }
-      this.http.get(`/assets/${folder}/${name}.svg`, { responseType: 'text' }).subscribe(raw => {
+      this.http.get(`assets/${folder}/${name}.svg`, { responseType: 'text' }).subscribe(raw => {
         cache.set(cacheKey, raw);
         this.svg.set(this.sanitizer.bypassSecurityTrustHtml(raw));
       });
