@@ -9,7 +9,7 @@ export const JOBS = [
       'Desenvolvimento de comunicação clara e coordenação em situações de alta exigência.',
     ],
     duration: 'Agosto 2022 - Atualmente',
-    icon: '../../../assets/logos/freelancer.svg',
+    icon: 'assets/logos/freelancer.svg',
   },
   {
     company: 'Secretaria do Trabalho',
@@ -20,7 +20,7 @@ export const JOBS = [
       'Colaboração na gestão e organização de informações utilizando ferramentas de banco de dados e planilhas.',
     ],
     duration: 'Janeiro 2022 - Agosto 2022',
-    icon: '../../../assets/logos/freelancer.svg',
+    icon: 'assets/logos/freelancer.svg',
   },
   {
     company: 'Imprime',
@@ -31,6 +31,6 @@ export const JOBS = [
       'Otimização de sistemas e equipamentos para melhor desempenho, contribuindo para a produtividade da operação.',
     ],
     duration: 'Janeiro 2021 - Janeiro 2022',
-    icon: '../../../assets/logos/freelancer.svg',
+    icon: 'assets/logos/freelancer.svg',
   },
 ];
