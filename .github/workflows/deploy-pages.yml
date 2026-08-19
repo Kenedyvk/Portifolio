@@ -33,33 +33,33 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - - name: Create Angular environments
-  run: |
-    mkdir -p src/environments
+      - name: Create Angular environments
+        run: |
+          mkdir -p src/environments
 
-    cat > src/environments/environment.ts <<'EOF'
-    export const environment = {
-      production: false,
-      sanity: {
-        projectId: 'placeholder',
-        dataset: 'production',
-        apiVersion: '2025-05-20',
-        useCdn: true
-      }
-    };
-    EOF
+          cat > src/environments/environment.ts <<'EOF'
+          export const environment = {
+            production: false,
+            sanity: {
+              projectId: 'placeholder',
+              dataset: 'production',
+              apiVersion: '2025-05-20',
+              useCdn: true
+            }
+          };
+          EOF
 
-    cat > src/environments/environment.prod.ts <<'EOF'
-    export const environment = {
-      production: true,
-      sanity: {
-        projectId: 'placeholder',
-        dataset: 'production',
-        apiVersion: '2025-05-20',
-        useCdn: true
-      }
-    };
-    EOF
+          cat > src/environments/environment.prod.ts <<'EOF'
+          export const environment = {
+            production: true,
+            sanity: {
+              projectId: 'placeholder',
+              dataset: 'production',
+              apiVersion: '2025-05-20',
+              useCdn: true
+            }
+          };
+          EOF
 
       - name: Build Angular
         run: npm run build -- --base-href /Portifolio/
