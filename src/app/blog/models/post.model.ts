@@ -1,4 +1,4 @@
-export interface PortableTextMark {
+﻿export interface PortableTextMark {
   _key: string;
   _type: string;
   href?: string;
@@ -71,3 +71,5 @@ export interface Post extends PostSummary {
   systemCreatedAt?: string;
   systemUpdatedAt?: string;
 }
+
+

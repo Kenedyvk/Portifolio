@@ -1,4 +1,4 @@
-import {
+﻿import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
@@ -459,7 +459,7 @@ export class BlogPostComponent implements OnInit, OnDestroy {
       publisher: {
         '@type': 'Person',
         '@id': `${this.siteOrigin}/#sobre`,
-        name: 'Alisson Lima',
+        name: 'Vinicius Kenedy',
         url: this.siteOrigin,
       },
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
@@ -680,3 +680,5 @@ export class BlogPostComponent implements OnInit, OnDestroy {
     return meaningfulSystemUpdatedAt;
   }
 }
+
+

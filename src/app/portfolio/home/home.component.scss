@@ -50,7 +50,13 @@
     left: -80px;
     width: 480px;
     height: 480px;
-    background: radial-gradient(circle, tokens.$purple-500 0%, transparent 70%);
+    background: radial-gradient(
+  circle,
+  rgba(0, 140, 255, 0.85) 0%,
+  rgba(0, 184, 255, 0.45) 35%,
+  rgba(0, 217, 255, 0.18) 55%,
+  transparent 72%
+    );
     animation: orb-drift-a 18s ease-in-out infinite;
   }
 
@@ -60,7 +66,13 @@
     bottom: auto;
     width: 460px;
     height: 460px;
-    background: radial-gradient(circle, tokens.$accent-pink 0%, transparent 70%);
+    background: radial-gradient(
+  circle,
+  rgba(0, 217, 255, 0.70) 0%,
+  rgba(0, 229, 195, 0.35) 40%,
+  rgba(0, 140, 255, 0.12) 60%,
+  transparent 72%
+);
     animation: orb-drift-b 22s ease-in-out infinite;
     opacity: 0.24;
     transform: translateY(-50%);

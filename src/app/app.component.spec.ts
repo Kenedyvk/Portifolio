@@ -1,4 +1,4 @@
-import { TestBed } from '@angular/core/testing';
+﻿import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { AppComponent } from './app.component';
 
@@ -16,10 +16,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'alissonlimabr'`, () => {
+  it(`should have as title 'Kenedyvk'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('alissonlimabr');
+    expect(app.title).toEqual('Kenedyvk');
   });
 
   it('keeps the footer at the bottom when the page is shorter than the viewport', () => {
@@ -38,3 +38,5 @@ describe('AppComponent', () => {
     expect(mainStyles.flexGrow).toBe('1');
   });
 });
+
+

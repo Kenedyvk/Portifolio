@@ -1,4 +1,4 @@
-import {
+﻿import {
   Component,
   ElementRef,
   HostListener,
@@ -69,3 +69,5 @@ export class ReadingPreferencesComponent {
     }
   }
 }
+
+

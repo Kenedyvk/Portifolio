@@ -1,4 +1,4 @@
-import {
+﻿import {
   Directive,
   ElementRef,
   Input,
@@ -83,3 +83,5 @@ export class CounterDirective implements OnInit, OnDestroy {
     this.rafId = requestAnimationFrame(tick);
   }
 }
+
+

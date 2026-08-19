@@ -1,4 +1,4 @@
-import { Category } from '../models/post.model';
+﻿import { Category } from '../models/post.model';
 
 const CATEGORY_FALLBACK_PALETTE = [
   '#a855f7',
@@ -31,3 +31,5 @@ export function resolveCategoryColor(
 
   return CATEGORY_FALLBACK_PALETTE[hash % CATEGORY_FALLBACK_PALETTE.length];
 }
+
+

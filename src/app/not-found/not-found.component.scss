@@ -1,4 +1,4 @@
-@use "src/assets/scss/palette" as tokens;
+﻿@use "src/assets/scss/palette" as tokens;
 @use "src/assets/scss/variables-mixins" as *;
 
 .not-found-shell {
@@ -245,3 +245,5 @@
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
+
+

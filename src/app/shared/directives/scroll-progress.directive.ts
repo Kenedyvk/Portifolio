@@ -1,4 +1,4 @@
-import {
+﻿import {
   Directive,
   ElementRef,
   NgZone,
@@ -72,3 +72,5 @@ export class ScrollProgressDirective implements OnInit, OnDestroy {
     }
   }
 }
+
+

@@ -1,25 +1,22 @@
-# Alisson Lima Dev
+﻿# Vinicius Kenedy
 
-Índice técnico das URLs canônicas do site para navegação de agentes de IA.
+Portfólio profissional de Vinicius Kenedy.
 
-## Identidade profissional
+## Perfil
 
-- [Perfil institucional no IFAC](https://integra.ifac.edu.br/p/alisson-mendonca-de-lima): referência pública da identidade profissional deste portfólio.
+Estudante de Análise e Desenvolvimento de Sistemas na UNINTER e desenvolvedor web em formação.
 
-## Páginas principais
+Conhecimentos em Python, JavaScript, HTML5, CSS3, SQL, MySQL, SQL Server, Docker, Git, GitHub e Redes de Computadores.
 
-- [Home](https://www.alissonlimadev.com/): visão geral do portfólio.
-- [Perfil](https://www.alissonlimadev.com/#perfil): resumo profissional e competências.
-- [Projetos](https://www.alissonlimadev.com/#projetos): projetos e stack utilizada.
-- [Contato](https://www.alissonlimadev.com/#contato): canais de contato.
+Experiência com suporte técnico, manutenção de computadores, atendimento ao usuário e resolução de problemas.
 
-## Conteúdo técnico
+## Links
 
-- [Blog](https://www.alissonlimadev.com/blog): artigos e estudos técnicos.
-- [Categorias do blog](https://www.alissonlimadev.com/blog/categorias): navegação por temas.
+- Portfólio: https://kenedyvk.github.io/Portifolio/
+- GitHub: https://github.com/Kenedyvk
+- LinkedIn: https://www.linkedin.com/in/viniciuskennedy-17808a206
+- E-mail: viniciuskennedy3@gmail.com
 
-## Descoberta e rastreamento
+## Objetivo profissional
 
-- [Sitemap XML](https://www.alissonlimadev.com/sitemap.xml): lista de URLs indexáveis.
-- [RSS](https://www.alissonlimadev.com/rss.xml): feed de atualizações do blog.
-- [Robots](https://www.alissonlimadev.com/robots.txt): diretrizes para crawlers.
+Busco oportunidades como estagiário ou Desenvolvedor Web Júnior para aplicar meus conhecimentos em projetos reais e evoluir profissionalmente.

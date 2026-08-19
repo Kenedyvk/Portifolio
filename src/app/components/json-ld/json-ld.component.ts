@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
@@ -10,126 +10,132 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 export class JsonLdComponent implements OnInit {
   jsonLD!: SafeHtml;
 
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor(private sanitizer: DomSanitizer) {}
 
   ngOnInit() {
     const json = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://www.alissonlimadev.com/#sobre',
-      'mainEntityOfPage': {
+      '@id': 'https://kenedyvk.github.io/Portifolio/#sobre',
+
+      mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://www.alissonlimadev.com/'
+        '@id': 'https://kenedyvk.github.io/Portifolio/',
       },
-      name: 'Alisson Lima',
-      jobTitle: 'Desenvolvedor Full Stack',
-      description: 'Portfólio de Alisson Lima, desenvolvedor full stack experiente no Acre. Especialista em Java, Angular, Spring Boot, AWS e soluções web escaláveis.',
-      about: 'Graduado em Análise e Desenvolvimento de Sistemas, pós-graduado em Engenharia de Software e com MBA em Gestão de Projetos PMI-PMBok. Experiência como desenvolvedor na Contax S.A e na VINT Global, atuando para a Secretaria da Fazenda do Estado do Acre. Atualmente Analista e Desenvolvedor no IFAC.',
+
+      name: 'Vinicius Kenedy',
+      alternateName: 'Kenedyvk',
+      jobTitle: 'Desenvolvedor Web Júnior',
+
+      description:
+        'Portfólio de Vinicius Kenedy, estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor web em formação, com conhecimentos em Python, JavaScript, HTML5, CSS3, SQL, Docker, Git e tecnologias web.',
+
+      about:
+        'Vinicius Kenedy é estudante de Análise e Desenvolvimento de Sistemas na UNINTER, com foco em desenvolvimento web. Possui conhecimentos em Python, JavaScript, HTML5, CSS3, SQL, MySQL, SQL Server, Docker, Git, GitHub e Redes de Computadores. Também possui experiência com suporte técnico, manutenção de computadores, atendimento ao usuário e resolução de problemas.',
+
       nationality: 'Brasileiro',
-      birthPlace: {
-        '@type': 'Place',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Rio Branco',
-          addressRegion: 'AC',
-          addressCountry: 'BR'
-        }
-      },
-      homeLocation: {
-        '@type': 'Place',
-        name: 'Rio Branco, Acre',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Rio Branco',
-          addressRegion: 'AC',
-          addressCountry: 'BR'
-        }
-      },
+
       alumniOf: [
-        { '@type': 'EducationalOrganization', name: 'MBA em Gestão de Projetos PMI-PMBok', sameAs: 'https://fasuleducacional.edu.br' },
-        { '@type': 'EducationalOrganization', name: 'Engenharia de Software', sameAs: 'https://fasuleducacional.edu.br' },
-        { '@type': 'EducationalOrganization', name: 'Capacitação em Desenvolvimento Full Stack', sameAs: 'https://www.ufac.br/' },
-        { '@type': 'CollegeOrUniversity', name: 'Análise e Desenvolvimento de Sistemas', sameAs: 'https://www.unigran.br/' }
+        {
+          '@type': 'CollegeOrUniversity',
+          name: 'UNINTER - Centro Universitário Internacional',
+          sameAs: 'https://www.uninter.com/',
+        },
       ],
+
       gender: 'Masculino',
-      url: 'https://www.alissonlimadev.com',
-      image: 'https://i.imgur.com/JLom84P.png',
-      email: 'alissonlimabr.dev@gmail.com',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Rio Branco',
-        addressRegion: 'AC',
-        addressCountry: 'BR'
-      },
+
+      url: 'https://kenedyvk.github.io/Portifolio/',
+
+      image: 'https://avatars.githubusercontent.com/u/180127887?v=4',
+
+      email: 'mailto:viniciuskennedy3@gmail.com',
+
       sameAs: [
-        'https://www.linkedin.com/in/alissonlimadev/',
-        'https://github.com/alissonlimabr',
-        'https://www.youtube.com/@alisson_ml',
-        'https://www.instagram.com/alisson_ml/',
-        'https://integra.ifac.edu.br/p/alisson-mendonca-de-lima'
+        'https://github.com/Kenedyvk',
+        'https://www.linkedin.com/in/viniciuskennedy-17808a206',
+        'https://kenedyvk.github.io/Portifolio/',
       ],
+
       knowsAbout: [
-        'Portfólio dev', 'Desenvolvedor Acre', 'Full Stack', 'Java', 'Angular',
-        'Spring Boot', 'AWS', 'Desenvolvedor experiente', 'Desenvolvimento Web', 'Arquitetura de Microsserviços'
+        'Desenvolvimento Web',
+        'Python',
+        'JavaScript',
+        'HTML5',
+        'CSS3',
+        'SQL',
+        'MySQL',
+        'SQL Server',
+        'Docker',
+        'Git',
+        'GitHub',
+        'Redes de Computadores',
+        'Suporte Técnico',
+        'Manutenção de Computadores',
+        'APIs',
+        'Desenvolvimento de Sistemas',
       ],
+
       hasOccupation: [
         {
           '@type': 'Occupation',
-          name: 'Software Developer',
-          skills: ['Python', 'Django', 'PostgreSQL', 'Docker', 'WordPress', 'Elementor', 'Figma', 'Git'],
-          description: 'Desenvolvimento e integração de sistemas utilizando Python, Django, PostgreSQL, Docker, Wordpress, Elementor, Figma, Git.',
-          startDate: '2025-04',
-          employer: {
-            '@type': 'Organization', name: 'Instituto Federal do Acre',
-            alternateName: 'IFAC'
-          }
+          name: 'Desenvolvedor Web em formação',
+          occupationLocation: {
+            '@type': 'Country',
+            name: 'Brasil',
+          },
+          skills: [
+            'Python',
+            'JavaScript',
+            'HTML5',
+            'CSS3',
+            'SQL',
+            'MySQL',
+            'SQL Server',
+            'Docker',
+            'Git',
+            'GitHub',
+          ],
+          description:
+            'Desenvolvedor web em formação com foco na construção de aplicações, APIs e soluções digitais, buscando oportunidade como estagiário ou desenvolvedor web júnior.',
         },
         {
           '@type': 'Occupation',
-          name: 'Desenvolvedor Full Stack',
-          skills: ['Angular', 'Spring Boot', 'Java', 'Oracle', 'Docker', 'Nginx', 'Strapi', 'APIs REST', 'XML/XSLT', 'Web Services'],
-          description: 'APIs REST, XML/XSLT, Web Services, Angular, Spring Boot, Oracle, Docker, Nginx, Strapi.',
-          startDate: '2024-08',
-          endDate: '2025-04',
-          employer: { '@type': 'Organization', name: 'VINT Global Tecnologia Ltda', alternateName: 'VINT Global' }
+          name: 'Suporte Técnico de TI',
+          occupationLocation: {
+            '@type': 'Country',
+            name: 'Brasil',
+          },
+          skills: [
+            'Suporte Técnico',
+            'Manutenção de Computadores',
+            'Atendimento ao Usuário',
+            'Redes de Computadores',
+            'Resolução de Problemas',
+          ],
+          description:
+            'Experiência com suporte técnico, manutenção de computadores, atendimento ao usuário e resolução de problemas relacionados a tecnologia da informação.',
         },
-        {
-          '@type': 'Occupation',
-          name: 'Desenvolvedor Full Stack',
-          skills: ['Angular', 'Spring Boot', 'AWS', 'Azure', 'Kubernetes', 'Docker'],
-          description: 'Projetos freelancer com Angular, Spring Boot, AWS, Azure/Kubernetes, Docker.',
-          startDate: '2024-01',
-          endDate: '2024-07',
-          employer: { '@type': 'Organization', name: 'Freelancer' }
-        },
-        {
-          '@type': 'Occupation',
-          name: 'Desenvolvedor Full Stack Jr.',
-          skills: ['Azure DevOps', 'Docker', 'Java', 'SQL Server', 'PHP'],
-          description: 'Manutenção e migração de sistemas da Caixa Econômica Federal, Azure DevOps, Docker, Java, SQL Server, PHP.',
-          startDate: '2023-09',
-          endDate: '2023-11',
-          employer: { '@type': 'Organization', name: 'Contax S.A' }
-        },
-        {
-          '@type': 'Occupation',
-          name: 'Bolsista em Desenvolvimento Web Full Stack',
-          skills: ['Java', 'Angular', 'Spring Boot', 'AWS', 'CI/CD'],
-          description: 'Desenvolvimento de sistemas para Motorola e Instituto Eldorado, Java, Angular, Spring Boot, AWS, CI/CD.',
-          startDate: '2022-03',
-          endDate: '2022-10',
-          employer: { '@type': 'Organization', name: 'Universidade Federal do Acre', alternateName: 'UFAC' }
-        }
-      ]
-    };
+      ],
 
+      seeks: {
+        '@type': 'Demand',
+        name: 'Oportunidade profissional em Desenvolvimento de Software',
+        description:
+          'Busca oportunidades como estagiário ou Desenvolvedor Web Júnior para aplicar conhecimentos em projetos reais e continuar evoluindo profissionalmente.',
+      },
+    };
 
     this.jsonLD = this.getSafeHTML(json);
   }
 
-  getSafeHTML(value: {}) {
+  getSafeHTML(value: object): SafeHtml {
     const json = JSON.stringify(value, null, 2);
-    const html = `<script type="application/ld+json">${json}</script>`;
+    const html =
+      '<script type="application/ld+json">' +
+      json +
+      '</script>';
+
     return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 }

@@ -1,4 +1,4 @@
-import {
+﻿import {
   Injectable,
   PLATFORM_ID,
   computed,
@@ -148,3 +148,5 @@ export class ReadingPreferencesService {
     );
   }
 }
+
+

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+﻿import { Component } from '@angular/core';
 import {
   ComponentFixture,
   TestBed,
@@ -69,3 +69,5 @@ describe('ImageLoadStateDirective', () => {
     expect(shell.classList.contains('image-load-shell--loaded')).toBeTrue();
   }));
 });
+
+

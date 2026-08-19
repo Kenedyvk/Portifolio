@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+﻿import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReadingPreferencesComponent } from './reading-preferences.component';
 
 describe('ReadingPreferencesComponent', () => {
@@ -54,3 +54,5 @@ describe('ReadingPreferencesComponent', () => {
     expect(trigger.getAttribute('aria-expanded')).toBe('false');
   });
 });
+
+

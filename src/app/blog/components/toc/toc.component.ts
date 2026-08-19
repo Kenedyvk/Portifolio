@@ -1,4 +1,4 @@
-import { isPlatformBrowser } from '@angular/common';
+﻿import { isPlatformBrowser } from '@angular/common';
 import {
   Component,
   PLATFORM_ID,
@@ -68,3 +68,5 @@ export class TocComponent {
     }
   }
 }
+
+

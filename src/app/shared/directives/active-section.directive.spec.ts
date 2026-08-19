@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+﻿import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActiveSectionDirective } from './active-section.directive';
 
@@ -123,3 +123,5 @@ function setSectionTop(section: HTMLElement, top: number): void {
     }),
   });
 }
+
+

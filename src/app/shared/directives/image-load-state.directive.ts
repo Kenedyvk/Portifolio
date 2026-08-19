@@ -1,4 +1,4 @@
-import {
+﻿import {
   AfterViewInit,
   Directive,
   ElementRef,
@@ -74,3 +74,5 @@ export class ImageLoadStateDirective implements AfterViewInit, OnDestroy {
     this.failed.set(true);
   }
 }
+
+

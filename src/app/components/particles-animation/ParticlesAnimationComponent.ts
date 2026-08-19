@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, PLATFORM_ID, ChangeDetectionStrategy } from '@angular/core';
+﻿import { Component, OnInit, Inject, PLATFORM_ID, ChangeDetectionStrategy } from '@angular/core';
 import { NgParticlesService, NgxParticlesComponent, NgxParticlesModule } from '@tsparticles/angular';
 import { isPlatformBrowser } from '@angular/common';
 import { animate, style, transition, trigger } from '@angular/animations';
@@ -68,3 +68,5 @@ export class ParticlesAnimationComponent implements OnInit {
     });
   }
 }
+
+

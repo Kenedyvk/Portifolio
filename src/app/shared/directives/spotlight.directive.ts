@@ -1,4 +1,4 @@
-import {
+﻿import {
   Directive,
   ElementRef,
   HostListener,
@@ -62,3 +62,5 @@ export class SpotlightDirective implements OnInit, OnDestroy {
     });
   }
 }
+
+

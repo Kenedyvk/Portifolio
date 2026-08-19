@@ -1,3 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
-Sitemap: https://www.alissonlimadev.com/sitemap.xml
+
+Sitemap: https://kenedyvk.github.io/Portifolio/sitemap.xml

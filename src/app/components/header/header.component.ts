@@ -1,4 +1,4 @@
-import {
+﻿import {
   Component,
   EventEmitter,
   Input,
@@ -65,3 +65,5 @@ export class HeaderComponent {
     this.activePortfolioHash.set(`#${sectionId}`);
   }
 }
+
+

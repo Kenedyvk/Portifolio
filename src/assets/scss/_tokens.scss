@@ -1,4 +1,4 @@
-@use "palette" as tokens;
+﻿@use "palette" as tokens;
 
 // CSS custom properties. Overrides de tema claro: blog-light-theme.scss.
 
@@ -73,3 +73,5 @@
   --transition-normal: 0.25s ease;
   --transition-slow: 0.4s ease;
 }
+
+

@@ -1,4 +1,4 @@
-import {
+﻿import {
   Directive,
   ElementRef,
   EventEmitter,
@@ -108,3 +108,5 @@ export class ContentHeadingsDirective implements OnDestroy {
     return parsedLevel === 3 ? 3 : 2;
   }
 }
+
+

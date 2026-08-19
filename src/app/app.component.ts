@@ -1,4 +1,4 @@
-import {
+﻿import {
   Component,
   computed,
   DestroyRef,
@@ -70,7 +70,7 @@ export class AppComponent implements OnInit {
   readonly primaryContent =
     viewChild<ElementRef<HTMLElement>>('primaryContent');
 
-  title = 'alissonlimabr';
+  title = 'Kenedyvk';
 
   faBars = faBars;
   faXmark = faXmark;
@@ -294,3 +294,5 @@ export class AppComponent implements OnInit {
     return url.split('?')[0].split('#')[0] || '/';
   }
 }
+
+

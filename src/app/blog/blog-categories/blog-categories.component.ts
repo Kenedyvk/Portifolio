@@ -1,4 +1,4 @@
-import {
+﻿import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
@@ -120,3 +120,5 @@ export class BlogCategoriesComponent implements OnInit {
     link.href = `${this.siteOrigin}${path}`;
   }
 }
+
+

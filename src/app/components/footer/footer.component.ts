@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+﻿import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 
@@ -13,3 +13,5 @@ export class FooterComponent {
   readonly faCode = faCode;
   readonly anoAtual = new Date().getFullYear();
 }
+
+

@@ -1,4 +1,4 @@
-import {
+﻿import {
   Injectable,
   PLATFORM_ID,
   TransferState,
@@ -253,10 +253,10 @@ export class SanityService {
               "imageHotspot": image.hotspot,
               "imageDimensions": image.asset->metadata.dimensions
             },
-            { "name": "Alisson Lima", "url": "https://www.alissonlimadev.com" }
+            { "name": "Vinicius Kenedy", "url": "https://www.kenedyvk.com" }
           ),
           defined(author) => { "name": author },
-          { "name": "Alisson Lima", "url": "https://www.alissonlimadev.com" }
+          { "name": "Vinicius Kenedy", "url": "https://www.kenedyvk.com" }
         ),
         publishedAt, tags, featured,
         updatedAt,
@@ -923,3 +923,5 @@ export class SanityService {
       .replace(/"/g, '&quot;');
   }
 }
+
+

@@ -1,4 +1,4 @@
-import {
+﻿import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
@@ -115,7 +115,7 @@ export class BlogListComponent implements OnInit {
                 `${result.category.title} | Blog | ${this.siteBrand}`,
                 (
                   result.category.description ||
-                  `Artigos da categoria ${result.category.title} no blog de Alisson Lima.`
+                  `Artigos da categoria ${result.category.title} no blog de Vinicius Kenedy.`
                 ).slice(0, 160),
                 `/blog/categoria/${result.category.slug.current}`,
               );
@@ -406,3 +406,5 @@ export class BlogListComponent implements OnInit {
     });
   }
 }
+
+

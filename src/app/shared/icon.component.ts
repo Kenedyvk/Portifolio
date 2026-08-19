@@ -1,4 +1,4 @@
-import {
+﻿import {
   Component,
   ViewEncapsulation,
   ChangeDetectionStrategy,
@@ -71,3 +71,5 @@ export class IconComponent {
     });
   }
 }
+
+

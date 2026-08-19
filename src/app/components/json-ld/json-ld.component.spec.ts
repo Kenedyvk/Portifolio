@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+﻿import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { JsonLdComponent } from './json-ld.component';
 
@@ -20,3 +20,5 @@ describe('JsonLdComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+

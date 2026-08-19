@@ -1,4 +1,4 @@
-// Copie este arquivo para environment.ts (dev) e environment.prod.ts (prod)
+﻿// Copie este arquivo para environment.ts (dev) e environment.prod.ts (prod)
 // e preencha com seus valores. Nunca comite os arquivos com valores reais.
 export const environment = {
   production: false,
@@ -9,3 +9,5 @@ export const environment = {
     useCdn: false,
   },
 };
+
+

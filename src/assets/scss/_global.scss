@@ -1,4 +1,4 @@
-@use "palette" as tokens;
+﻿@use "palette" as tokens;
 @use "variables-mixins" as *;
 
 // Estilo global para todos os ícones FontAwesome
@@ -312,3 +312,5 @@ main:focus {
     filter: drop-shadow(0 0 6px rgba(tokens.$accent-pink, 0.5));
   }
 }
+
+

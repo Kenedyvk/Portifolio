@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+﻿import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SwipeDirective } from './swipe.directive';
 
@@ -122,3 +122,5 @@ describe('SwipeDirective', () => {
     expect(setPointerCapture).not.toHaveBeenCalled();
   });
 });
+
+

@@ -1,4 +1,4 @@
-// Variáveis de cor e dimensão. Tokens CSS runtime: _tokens.scss.
+﻿// Variáveis de cor e dimensão. Tokens CSS runtime: _tokens.scss.
 
 // Layout
 $container-max-width: 1280px;
@@ -7,98 +7,100 @@ $prose-max-width: 732px;
 $prose-wide-max-width: 900px;
 
 // Fundo e superfícies
-$background-color: #0a0814;
+$background-color: #050b12;
 $bg: $background-color;
 
-$surface: #14101f;
-$surface-elevated: #1e1830;
-$surface-bright: #2a2240;
+$surface: #08131d;
+$surface-elevated: #0b1824;
+$surface-bright: #102231;
 
 // Base
-$white: #ffffff;
+$white: #f4f8fb;
 $text: $white;
-$text-muted: #8b859b;
+$text-muted: #9eb1c1;
 
 // Escala de cinza
-$gray-100: #e8e5f0;
-$gray-200: #b8b3c9;
-$gray-300: #8b859b;
-$gray-400: #5c5670;
-$gray-500: #3f3a52;
-$gray-600: #2a2638;
-$gray-700: #1e1a2a;
-$gray-800: #15121f;
-$gray-900: #0e0b17;
+$gray-100: #e8f3f8;
+$gray-200: #c3d3dc;
+$gray-300: #9eb1c1;
+$gray-400: #708897;
+$gray-500: #496170;
+$gray-600: #2d424f;
+$gray-700: #1d2e39;
+$gray-800: #101d26;
+$gray-900: #071118;
 
-// Escala de roxo
-$purple-50: #f4eafc;
-$purple-100: #e5cff8;
-$purple-200: #c9a1f0;
-$purple-300: #ad73e8;
-$purple-400: #a855f7;
-$purple-500: #7c3aed;
-$purple-600: #6d28d9;
-$purple-700: #5b21b6;
-$purple-800: #3b0f7e;
-$purple-900: #1f0942;
+// Escala principal
+// Mantemos os nomes "purple" para não quebrar o projeto,
+// mas agora eles representam azul/ciano/verde-água.
+$purple-50: #e6fbff;
+$purple-100: #c9f7ff;
+$purple-200: #8fefff;
+$purple-300: #4ce5ff;
+$purple-400: #00d9ff;
+$purple-500: #008cff;
+$purple-600: #0073d1;
+$purple-700: #005ba8;
+$purple-800: #00477f;
+$purple-900: #003252;
 
 // Acentos
-$accent-pink: #e879f9;
-$accent-cyan: #67e8f9;
+$accent-pink: #00e5c3;
+$accent-cyan: #00b8ff;
 $pink: $accent-pink;
 $cyan: $accent-cyan;
 
 // Tema escuro de leitura do blog
-$blog-dark-bg: #151515;
-$blog-dark-surface: #1d1d1f;
-$blog-dark-surface-elevated: #242428;
-$blog-dark-text: #cbd5e1;
-$blog-dark-heading: #f8fafc;
-$blog-dark-text-muted: #8f98a5;
-$blog-dark-border: #303037;
-$blog-dark-accent: #a78bfa;
-$blog-dark-accent-hover: #c4b5fd;
-$blog-dark-interactive: #a875e2;
-$blog-dark-interactive-hover: #c19aef;
-$blog-dark-link: #c4b5fd;
-$blog-dark-link-hover: #ddd6fe;
-$blog-dark-code-bg: #111113;
-$blog-dark-inline-code-color: #b7b9ca;
-$blog-dark-shimmer-a: #221e2a;
-$blog-dark-shimmer-b: #302a39;
-$blog-dark-code-comment: #928c9d;
-$blog-dark-code-punctuation: #bdb6c8;
-$blog-dark-code-string: #aabfaf;
-$blog-dark-code-keyword: #c9b3a7;
-$blog-dark-callout-info: #91b3c2;
-$blog-dark-callout-warning: #cbb184;
-$blog-dark-callout-danger: #ca8b92;
+$blog-dark-bg: #071018;
+$blog-dark-surface: #0b1722;
+$blog-dark-surface-elevated: #102231;
+$blog-dark-text: #d7e5ec;
+$blog-dark-heading: #f4f8fb;
+$blog-dark-text-muted: #91a7b5;
+$blog-dark-border: #1d3544;
+$blog-dark-accent: #00d9ff;
+$blog-dark-accent-hover: #00e5c3;
+$blog-dark-interactive: #008cff;
+$blog-dark-interactive-hover: #00b8ff;
+$blog-dark-link: #00d9ff;
+$blog-dark-link-hover: #00e5c3;
+$blog-dark-code-bg: #050c12;
+$blog-dark-inline-code-color: #00d9ff;
+$blog-dark-shimmer-a: #0c1a25;
+$blog-dark-shimmer-b: #112633;
+$blog-dark-code-comment: #68808f;
+$blog-dark-code-punctuation: #a9bbc5;
+$blog-dark-code-string: #00e5a8;
+$blog-dark-code-keyword: #00b8ff;
+$blog-dark-callout-info: #00d9ff;
+$blog-dark-callout-warning: #f4c95d;
+$blog-dark-callout-danger: #ff6b7c;
 
 // Tema claro de leitura do blog
-$blog-light-bg: $white;
-$blog-light-surface: #f8fafc;
-$blog-light-surface-elevated: $white;
-$blog-light-text: #334155;
-$blog-light-heading: #1e293b;
-$blog-light-text-muted: #64748b;
-$blog-light-border: #e2e8f0;
-$blog-light-accent: $purple-500;
-$blog-light-accent-strong: $purple-600;
-$blog-light-accent-hover: $purple-600;
-$blog-light-accent-warm: #b45309;
-$blog-light-link: #574a65;
-$blog-light-link-hover: #352c40;
-$blog-light-code-bg: #f7f4fc;
-$blog-light-shimmer-a: #f3eff9;
-$blog-light-shimmer-b: #e8e1f1;
-$blog-light-shadow: #2d1c44;
-$blog-light-code-comment: #756a84;
-$blog-light-code-punctuation: #554b63;
-$blog-light-code-string: #15803d;
-$blog-light-callout-info: #0891b2;
-$blog-light-callout-danger: #dc2626;
+$blog-light-bg: #ffffff;
+$blog-light-surface: #f5fbfd;
+$blog-light-surface-elevated: #ffffff;
+$blog-light-text: #28404d;
+$blog-light-heading: #102531;
+$blog-light-text-muted: #647d89;
+$blog-light-border: #d8e7ed;
+$blog-light-accent: #008cff;
+$blog-light-accent-strong: #0073d1;
+$blog-light-accent-hover: #0067bd;
+$blog-light-accent-warm: #00a88e;
+$blog-light-link: #0073d1;
+$blog-light-link-hover: #004f91;
+$blog-light-code-bg: #eef8fb;
+$blog-light-shimmer-a: #edf7fa;
+$blog-light-shimmer-b: #dceff4;
+$blog-light-shadow: #0f2b38;
+$blog-light-code-comment: #6f8792;
+$blog-light-code-punctuation: #46606d;
+$blog-light-code-string: #008f75;
+$blog-light-callout-info: #008cff;
+$blog-light-callout-danger: #d92b45;
 
 // Semântica
-$success: #16a34a;
-$error: #b91c1c;
-$green-400: #4ade80;
+$success: #00e5a8;
+$error: #ff5c7a;
+$green-400: #00e5c3;

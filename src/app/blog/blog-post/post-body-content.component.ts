@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+﻿import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { SafeHtml } from '@angular/platform-browser';
 import {
   ContentHeading,
@@ -35,3 +35,5 @@ export class PostBodyContentComponent {
     ContentHeading[]
   >();
 }
+
+

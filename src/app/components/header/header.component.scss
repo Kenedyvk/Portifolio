@@ -1,4 +1,4 @@
-@use "src/assets/scss/palette" as tokens;
+﻿@use "src/assets/scss/palette" as tokens;
 @use "src/assets/scss/variables-mixins" as *;
 
 mat-toolbar {
@@ -120,3 +120,5 @@ mat-toolbar .nav-links .link--back {
     display: none !important;
   }
 }
+
+

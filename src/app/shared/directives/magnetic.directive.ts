@@ -1,4 +1,4 @@
-import {
+﻿import {
   DestroyRef,
   Directive,
   ElementRef,
@@ -67,3 +67,5 @@ export class MagneticDirective implements OnInit, OnDestroy {
     });
   }
 }
+
+

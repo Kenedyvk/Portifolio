@@ -1,62 +1,128 @@
-import { AUTH_JWT_SKILLS } from './auth-jwt-skills.constant';
-import { EVENT_PLATAFORM_SKILLS } from './event-plataform-skills.constant';
-import { MOTOVOICE_SKILLS } from './motovoice-skills.constant';
-import { PORTFOLIO_SKILLS } from './portfolio-skills.constant';
-import { RESET_PASSWORD_SKILLS } from './reset-password-skills.constant';
-
 interface Project {
   title: string;
   subtitle: string;
   description: string;
   url?: string;
-  skills: { icon: string; alt: string; name?: string }[];
+  skills: {
+    icon: string;
+    alt: string;
+    name?: string;
+  }[];
   size: 'featured' | 'standard' | 'placeholder';
 }
 
 export const PROJECTS: Project[] = [
   {
-    title: 'Portfólio Desenvolvedor',
-    subtitle: 'Angular 21 · SSR · Sanity CMS',
+    title: 'AgSUS - Sistema de Estudos',
+    subtitle: 'HTML · CSS · JavaScript · IA',
     description:
-      'Portfólio com SSR para performance e SEO, blog integrado ao Sanity CMS com busca, paginação, categorias, posts relacionados, RSS feed e syntax highlighting com Prism.js. Animações de partículas com TsParticles, marquee infinito de tecnologias e preferências de leitura com tema claro/escuro no blog.',
-    url: 'https://github.com/alissonlimabr/portfolio',
-    skills: PORTFOLIO_SKILLS,
+      'Sistema de estudos desenvolvido para o processo seletivo AgSUS, com painel do edital, organização de conteúdos, dados estruturados em JSON e chat de suporte com funcionamento offline e integração opcional com IA.',
+    url: 'https://github.com/Kenedyvk/AGSUS',
+    skills: [
+      {
+        icon: 'html5',
+        alt: 'HTML5',
+        name: 'HTML5',
+      },
+      {
+        icon: 'css3',
+        alt: 'CSS3',
+        name: 'CSS3',
+      },
+      {
+        icon: 'javascript',
+        alt: 'JavaScript',
+        name: 'JavaScript',
+      },
+      {
+        icon: 'github',
+        alt: 'GitHub',
+        name: 'GitHub',
+      },
+    ],
     size: 'featured',
   },
+
   {
-    title: 'Autenticação JWT',
-    subtitle: 'Java · Spring Security 6 · Kubernetes',
+    title: 'MM Eventos',
+    subtitle: 'HTML · CSS · JavaScript',
     description:
-      'Microsserviço de autenticação JWT orquestrado no Azure com Kubernetes e Docker. Frontend Angular consumindo a API.',
-    url: 'https://github.com/alissonlimabr/microservice-login-jwt',
-    skills: AUTH_JWT_SKILLS,
+      'Projeto web voltado à apresentação e divulgação de eventos, desenvolvido com tecnologias front-end e publicado no GitHub.',
+    url: 'https://github.com/Kenedyvk/vivamm.com.br',
+    skills: [
+      {
+        icon: 'html5',
+        alt: 'HTML5',
+        name: 'HTML5',
+      },
+      {
+        icon: 'css3',
+        alt: 'CSS3',
+        name: 'CSS3',
+      },
+      {
+        icon: 'javascript',
+        alt: 'JavaScript',
+        name: 'JavaScript',
+      },
+    ],
     size: 'standard',
   },
-    {
-    title: 'Motovoice',
-    subtitle: 'Spring Boot · Angular · Admin Panel',
+
+  {
+    title: 'Portfólio Desenvolvedor',
+    subtitle: 'Angular · TypeScript · SCSS',
     description:
-      'Sistema de coleta de ideias e feedbacks de produtos Motorola, com painel de gerenciamento e insights da plataforma. Produto sob demanda para a conclusão da 1ª turma do WebAcademy.',
-    url: 'https://motovoice.alissonlimadev.com/',
-    skills: MOTOVOICE_SKILLS,
+      'Meu portfólio profissional, desenvolvido em Angular, com interface responsiva, animações, apresentação de habilidades, experiência profissional, projetos e canais de contato.',
+    url: 'https://github.com/Kenedyvk/Portifolio',
+    skills: [
+      {
+        icon: 'angular',
+        alt: 'Angular',
+        name: 'Angular',
+      },
+      {
+        icon: 'typescript',
+        alt: 'TypeScript',
+        name: 'TypeScript',
+      },
+      {
+        icon: 'scss',
+        alt: 'SCSS',
+        name: 'SCSS',
+      },
+      {
+        icon: 'git',
+        alt: 'Git',
+        name: 'Git',
+      },
+    ],
     size: 'standard',
   },
+
   {
-    title: 'Reset Password',
-    subtitle: 'Java 17 · GitHub Actions · AWS',
+    title: 'Next.js - Estudos',
+    subtitle: 'Next.js · React · JavaScript',
     description:
-      'Módulo de recuperação de senhas via email com pipeline CI/CD GitHub Actions para deploy AWS. Frontend Angular consumindo a API.',
-    url: 'https://github.com/alissonlimabr/forgotPassword',
-    skills: RESET_PASSWORD_SKILLS,
-    size: 'standard',
-  },
-  {
-    title: 'Plataforma de eventos',
-    subtitle: 'React · Vite · GraphQL · Tailwind',
-    description:
-      'Plataforma de hospedagem de vídeos e aulas desenvolvida no Ignite Lab da Rocketseat.',
-    url: 'https://github.com/alissonlimabr/event-plataform-reactjs',
-    skills: EVENT_PLATAFORM_SKILLS,
+      'Projeto utilizado para estudos e experimentação com Next.js e React, explorando a estrutura de aplicações web modernas e desenvolvimento front-end.',
+    url: 'https://github.com/Kenedyvk/nextjs-boilerplate',
+    skills: [
+      {
+        icon: 'reactjs',
+        alt: 'React',
+        name: 'React',
+      },
+      {
+        icon: 'javascript',
+        alt: 'JavaScript',
+        name: 'JavaScript',
+      },
+      {
+        icon: 'github',
+        alt: 'GitHub',
+        name: 'GitHub',
+      },
+    ],
     size: 'standard',
   },
 ];

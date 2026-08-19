@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+﻿import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TocComponent } from './toc.component';
 
 describe('TocComponent', () => {
@@ -75,3 +75,5 @@ describe('TocComponent', () => {
     expect(localStorage.getItem(storageKey)).toBe('true');
   });
 });
+
+

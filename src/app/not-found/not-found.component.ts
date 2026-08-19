@@ -1,4 +1,4 @@
-import { DOCUMENT } from '@angular/common';
+﻿import { DOCUMENT } from '@angular/common';
 import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
@@ -83,3 +83,5 @@ export class NotFoundComponent implements OnInit, OnDestroy {
     link.href = `${this.siteOrigin}${path}`;
   }
 }
+
+

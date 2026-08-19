@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+﻿import { Routes } from '@angular/router';
 
 export const BLOG_ROUTES: Routes = [
   {
@@ -22,3 +22,5 @@ export const BLOG_ROUTES: Routes = [
       import('./blog-post/blog-post.component').then(m => m.BlogPostComponent),
   },
 ];
+
+

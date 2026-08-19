@@ -1,4 +1,4 @@
-// Mixins para responsividade
+﻿// Mixins para responsividade
 @mixin responsive($device) {
   @if $device == mobile {
     @media (max-width: 480px) {
@@ -52,3 +52,5 @@
     @content;
   }
 }
+
+

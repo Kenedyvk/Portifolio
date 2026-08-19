@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+﻿import { Component } from '@angular/core';
 import { ComponentFixture, TestBed, fakeAsync, flushMicrotasks, tick } from '@angular/core/testing';
 import { CodeBlockEnhancerDirective } from './code-block-enhancer.directive';
 
@@ -86,3 +86,5 @@ describe('CodeBlockEnhancerDirective', () => {
     expect(fixture.nativeElement.querySelectorAll('.code-copy-btn').length).toBe(1);
   }));
 });
+
+

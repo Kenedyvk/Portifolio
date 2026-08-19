@@ -1,4 +1,4 @@
-import {
+﻿import {
   Directive,
   EventEmitter,
   HostListener,
@@ -38,3 +38,5 @@ export class CopyToClipboardDirective {
       .catch(error => this.copyError.emit(error));
   }
 }
+
+

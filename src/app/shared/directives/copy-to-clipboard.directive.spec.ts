@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+﻿import { Component } from '@angular/core';
 import { ComponentFixture, TestBed, fakeAsync, flushMicrotasks } from '@angular/core/testing';
 import { CopyToClipboardDirective } from './copy-to-clipboard.directive';
 
@@ -17,7 +17,7 @@ import { CopyToClipboardDirective } from './copy-to-clipboard.directive';
   `,
 })
 class CopyToClipboardHostComponent {
-  text = 'https://alissonlimadev.com/blog/post';
+  text = 'https://kenedyvk.com/blog/post';
   copySucceeded = false;
   copyFailed = false;
 }
@@ -57,7 +57,7 @@ describe('CopyToClipboardDirective', () => {
     button.click();
     flushMicrotasks();
 
-    expect(writeText).toHaveBeenCalledOnceWith('https://alissonlimadev.com/blog/post');
+    expect(writeText).toHaveBeenCalledOnceWith('https://kenedyvk.com/blog/post');
     expect(fixture.componentInstance.copySucceeded).toBeTrue();
     expect(fixture.componentInstance.copyFailed).toBeFalse();
   }));
@@ -73,3 +73,5 @@ describe('CopyToClipboardDirective', () => {
     expect(fixture.componentInstance.copyFailed).toBeTrue();
   }));
 });
+
+

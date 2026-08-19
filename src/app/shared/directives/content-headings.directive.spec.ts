@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+﻿import { Component } from '@angular/core';
 import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 import {
   ContentHeading,
@@ -55,3 +55,5 @@ describe('ContentHeadingsDirective', () => {
     expect(fixture.componentInstance.headings).toEqual([]);
   }));
 });
+
+

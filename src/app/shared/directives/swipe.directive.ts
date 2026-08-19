@@ -1,4 +1,4 @@
-import { isPlatformBrowser } from '@angular/common';
+﻿import { isPlatformBrowser } from '@angular/common';
 import {
   AfterViewInit,
   Directive,
@@ -305,3 +305,5 @@ export class SwipeDirective implements AfterViewInit, OnDestroy {
     return this.host.nativeElement;
   }
 }
+
+
