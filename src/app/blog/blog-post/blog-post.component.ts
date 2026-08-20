@@ -114,7 +114,7 @@ export class BlogPostComponent implements OnInit, OnDestroy {
   private linkCopiedTimer: number | null = null;
   private readonly siteOrigin = SITE_ORIGIN;
   private readonly siteBrand = SITE_BRAND;
-  private readonly defaultOgImageUrl = `${this.siteOrigin}/assets/img/og-image.webp`;
+  private readonly defaultOgImageUrl = `${this.siteOrigin}/assets/img/og-image.webp?v=2`;
 
   constructor(
     private route: ActivatedRoute,
